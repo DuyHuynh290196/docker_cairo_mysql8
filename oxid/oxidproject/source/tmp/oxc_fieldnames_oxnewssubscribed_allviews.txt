@@ -1,0 +1,1 @@
+a:1:{s:7:"content";a:12:{s:4:"oxid";i:0;s:8:"oxuserid";i:0;s:5:"oxsal";i:0;s:7:"oxfname";i:0;s:7:"oxlname";i:0;s:7:"oxemail";i:0;s:9:"oxdboptin";i:0;s:13:"oxemailfailed";i:0;s:12:"oxsubscribed";i:0;s:14:"oxunsubscribed";i:0;s:11:"oxtimestamp";i:0;s:8:"oxshopid";i:0;}}

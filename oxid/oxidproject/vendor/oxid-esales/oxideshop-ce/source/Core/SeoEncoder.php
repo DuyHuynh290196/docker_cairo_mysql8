@@ -957,7 +957,7 @@ class SeoEncoder extends \OxidEsales\Eshop\Core\Base
      */
     public function setReservedWords($aReservedWords)
     {
-        self::$_aReservedWords = array_merge(self::$_aReservedWords, $aReservedWords);
+        self::$_aReservedWords = array_merge(self::$_aReservedWords, is_array($aReservedWords) ? $aReservedWords : []);
     }
 
 

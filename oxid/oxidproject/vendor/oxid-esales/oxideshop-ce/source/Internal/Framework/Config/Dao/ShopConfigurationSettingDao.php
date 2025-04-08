@@ -81,18 +81,14 @@ class ShopConfigurationSettingDao implements ShopConfigurationSettingDaoInterfac
                 'oxshopid'      => ':shopId',
                 'oxvarname'     => ':name',
                 'oxvartype'     => ':type',
-                'oxvarvalue'    => 'encode(:value, :key)',
+                'oxvarvalue'    => ':value',
             ])
             ->setParameters([
                 'id'        => $this->shopAdapter->generateUniqueId(),
                 'shopId'    => $shopConfigurationSetting->getShopId(),
                 'name'      => $shopConfigurationSetting->getName(),
                 'type'      => $shopConfigurationSetting->getType(),
-                'value'     => $this->shopSettingEncoder->encode(
-                    $shopConfigurationSetting->getType(),
-                    $shopConfigurationSetting->getValue()
-                ),
-                'key'       => $this->context->getConfigurationEncryptionKey(),
+                'value'     => $shopConfigurationSetting->getValue()
             ]);
 
         $queryBuilder->execute();
@@ -116,7 +112,7 @@ class ShopConfigurationSettingDao implements ShopConfigurationSettingDaoInterfac
     {
         $queryBuilder = $this->queryBuilderFactory->create();
         $queryBuilder
-            ->select('decode(oxvarvalue, :key) as value, oxvartype as type, oxvarname as name')
+            ->select('oxvarvalue as value, oxvartype as type, oxvarname as name')
             ->from('oxconfig')
             ->where('oxshopid = :shopId')
             ->andWhere('oxvarname = :name')
@@ -124,7 +120,6 @@ class ShopConfigurationSettingDao implements ShopConfigurationSettingDaoInterfac
             ->setParameters([
                 'shopId'    => $shopId,
                 'name'      => $name,
-                'key'       => $this->context->getConfigurationEncryptionKey(),
             ]);
 
         $result = $queryBuilder->execute()->fetch();
@@ -138,7 +133,7 @@ class ShopConfigurationSettingDao implements ShopConfigurationSettingDaoInterfac
         $setting = new ShopConfigurationSetting();
         $setting
             ->setName($name)
-            ->setValue($this->shopSettingEncoder->decode($result['type'], $result['value']))
+            ->setValue($result['value'])
             ->setShopId($shopId)
             ->setType($result['type']);
 

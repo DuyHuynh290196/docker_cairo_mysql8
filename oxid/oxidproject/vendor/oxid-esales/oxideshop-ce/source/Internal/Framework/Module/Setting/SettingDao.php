@@ -141,7 +141,7 @@ class SettingDao implements SettingDaoInterface
         $setting = new Setting();
         $setting
             ->setName($name)
-            ->setValue($this->shopSettingEncoder->decode($settingsData['type'], $settingsData['value']))
+            ->setValue($settingsData['value'])
             ->setType($settingsData['type']);
 
         if (
@@ -183,7 +183,7 @@ class SettingDao implements SettingDaoInterface
                 'oxshopid'      => ':shopId',
                 'oxvarname'     => ':name',
                 'oxvartype'     => ':type',
-                'oxvarvalue'    => 'encode(:value, :key)',
+                'oxvarvalue'    => ':value',
             ])
             ->setParameters([
                 'id'        => $this->shopAdapter->generateUniqueId(),
@@ -191,11 +191,7 @@ class SettingDao implements SettingDaoInterface
                 'shopId'    => $shopId,
                 'name'      => $shopModuleSetting->getName(),
                 'type'      => $shopModuleSetting->getType(),
-                'value'     => $this->shopSettingEncoder->encode(
-                    $shopModuleSetting->getType(),
-                    $shopModuleSetting->getValue()
-                ),
-                'key'       => $this->context->getConfigurationEncryptionKey(),
+                'value'     => $shopModuleSetting->getValue(),
             ]);
 
         $queryBuilder->execute();
@@ -242,7 +238,7 @@ class SettingDao implements SettingDaoInterface
     {
         $queryBuilder = $this->queryBuilderFactory->create();
         $queryBuilder
-            ->select('decode(oxvarvalue, :key) as value, oxvartype as type, oxvarname as name')
+            ->select('oxvarvalue as value, oxvartype as type, oxvarname as name')
             ->from('oxconfig')
             ->where('oxshopid = :shopId')
             ->andWhere('oxmodule = :moduleId')
@@ -251,7 +247,6 @@ class SettingDao implements SettingDaoInterface
                 'shopId'    => $shopId,
                 'moduleId'  => $this->getPrefixedModuleId($moduleId),
                 'name'      => $name,
-                'key'       => $this->context->getConfigurationEncryptionKey(),
             ]);
 
         $result = $queryBuilder->execute()->fetch();

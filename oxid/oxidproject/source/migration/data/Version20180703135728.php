@@ -43,7 +43,7 @@ class Version20180703135728 extends AbstractMigration
                       `OXID`,
                       ?, 
                       ?, 
-                      ENCODE(?, ?)
+                      ?
                   FROM `oxshops`                  
                   WHERE NOT EXISTS (
                       SELECT `OXVARNAME` 
@@ -53,7 +53,7 @@ class Version20180703135728 extends AbstractMigration
                   )";
         $this->addSql(
             $query,
-            [$varName, $varType, $rawValue, $configKey, $varName]
+            [$varName, $varType, $rawValue, $varName]
         );
     }
 

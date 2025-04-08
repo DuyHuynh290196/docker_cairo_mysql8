@@ -86,8 +86,8 @@ class KlarnaInstallerTest extends ModuleUnitTestCase
         KlarnaInstaller::onActivate();
         $db = DatabaseProvider::getDb(DatabaseProvider::FETCH_MODE_ASSOC);
 
-        $db->execute('update oxconfig set oxvarvalue=ENCODE(?, ?) where oxvarname=? and oxshopid=?',
-            [1, 'fq45QS09_fqyx09239QQ', 'blKlarnaAllowSeparateDeliveryAddress', 1]);
+        $db->execute('update oxconfig set oxvarvalue=? where oxvarname=? and oxshopid=?',
+            [1, 'blKlarnaAllowSeparateDeliveryAddress', 1]);
     }
 
     /**

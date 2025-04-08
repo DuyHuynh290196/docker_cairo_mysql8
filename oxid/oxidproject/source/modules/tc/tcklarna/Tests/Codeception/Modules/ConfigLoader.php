@@ -83,7 +83,7 @@ class ConfigLoader extends Module
 
         $encode = "ENCODE('{$typeEncode}', '{$klarnaKey}')";
 
-        $sql = "INSERT INTO `oxconfig` VALUES ('4060f0f9f705d470282a2ce5ed936e48', 1, 'module:tcklarna', 'sKlarnaActiveMode', 'str', {$encode}, now())";
+        $sql = "INSERT INTO `oxconfig` VALUES ('4060f0f9f705d470282a2ce5ed936e48', 1, 'module:tcklarna', 'sKlarnaActiveMode', 'str', {$typeEncode}, now())";
         $this->dbHandler->exec($sql);
 
         $this->setKlarnaMerchantAndPassword($type, $klarnaKey);
@@ -91,7 +91,7 @@ class ConfigLoader extends Module
         if($type == 'KCO') {
             $sql = "UPDATE oxuser SET oxbirthdate='1980-01-01', oxfon='02079460125' WHERE oxusername = 'user_gb@oxid-esales.com'";
             $this->dbHandler->exec($sql);
-            $sql = "UPDATE oxconfig SET OXVARVALUE = ENCODE('3', '{$klarnaKey}') WHERE OXVARNAME = 'iKlarnaActiveCheckbox'";
+            $sql = "UPDATE oxconfig SET OXVARVALUE = '3' WHERE OXVARNAME = 'iKlarnaActiveCheckbox'";
             $this->dbHandler->exec($sql);
 
         }
@@ -100,7 +100,7 @@ class ConfigLoader extends Module
             $encode = "ENCODE('$setB2BOption', '$klarnaKey')";
             $sql = "DELETE FROM `oxconfig` WHERE `oxvarname`='sKlarnaB2Option'";
             $this->dbHandler->exec($sql);
-            $sql = "INSERT INTO `oxconfig` VALUES ('f7309beb088c3437462abb18c893c755', 1, 'module:tcklarna', 'sKlarnaB2Option', 'str', {$encode}, now())";
+            $sql = "INSERT INTO `oxconfig` VALUES ('f7309beb088c3437462abb18c893c755', 1, 'module:tcklarna', 'sKlarnaB2Option', 'str', {$setB2BOption}, now())";
             $this->dbHandler->exec($sql);
         }
     }
@@ -118,7 +118,7 @@ class ConfigLoader extends Module
         $klarnaMerchantId = $this->getKlarnaDataByName('sKlarna'.$type.'MerchantId');
         $encode = "ENCODE('{$klarnaMerchantId}', '{$klarnaKey}')";
 
-        $sql = "INSERT INTO `oxconfig` VALUES ('f3b48ef3f7c17c916ef6018768377988', 1, 'module:tcklarna', 'sKlarnaMerchantId', 'str', {$encode}, now())";
+        $sql = "INSERT INTO `oxconfig` VALUES ('f3b48ef3f7c17c916ef6018768377988', 1, 'module:tcklarna', 'sKlarnaMerchantId', 'str', {$klarnaMerchantId}, now())";
         $this->dbHandler->exec($sql);
 
         $sql = "DELETE FROM `oxconfig` WHERE `OXVARNAME`='sKlarnaPassword'";
@@ -127,7 +127,7 @@ class ConfigLoader extends Module
         $klarnaPassword = $this->getKlarnaDataByName('sKlarna'.$type.'Password');
         $encode = "ENCODE('{$klarnaPassword}', '{$klarnaKey}')";
 
-        $sql = "INSERT INTO `oxconfig` VALUES ('efbd96702f6cead0967cd37ad2cdf49d', 1, 'module:tcklarna', 'sKlarnaPassword', 'str', {$encode}, now())";
+        $sql = "INSERT INTO `oxconfig` VALUES ('efbd96702f6cead0967cd37ad2cdf49d', 1, 'module:tcklarna', 'sKlarnaPassword', 'str', {$klarnaPassword}, now())";
         $this->dbHandler->exec($sql);
     }
 
@@ -159,6 +159,6 @@ class ConfigLoader extends Module
     protected function getEncodeString($value) {
         $encodeKey = $this->getKlarnaDataByName('sKlarnaEncodeKey');
         
-        return "ENCODE('{$value}', '{$encodeKey}')";
+        return "'{$value}'";
     }
 }

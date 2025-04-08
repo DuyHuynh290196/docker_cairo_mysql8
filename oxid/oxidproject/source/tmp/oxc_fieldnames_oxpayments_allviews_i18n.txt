@@ -1,0 +1,1 @@
+a:1:{s:7:"content";a:14:{s:4:"oxid";i:0;s:8:"oxactive";i:0;s:6:"oxdesc";i:1;s:8:"oxaddsum";i:0;s:12:"oxaddsumtype";i:0;s:13:"oxaddsumrules";i:0;s:10:"oxfromboni";i:0;s:12:"oxfromamount";i:0;s:10:"oxtoamount";i:0;s:9:"oxvaldesc";i:1;s:9:"oxchecked";i:0;s:10:"oxlongdesc";i:1;s:6:"oxsort";i:0;s:11:"oxtimestamp";i:0;}}

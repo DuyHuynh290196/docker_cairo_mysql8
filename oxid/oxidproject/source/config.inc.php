@@ -8,18 +8,18 @@
 // Database connection information
 $this->dbType = 'pdo_mysql';
 $this->dbCharset = 'utf8';
-$this->dbHost = '<dbHost>'; // database host name
+$this->dbHost = 'db'; // database host name
 $this->dbPort  = 3306; // tcp port to which the database is bound
-$this->dbName = '<dbName>'; // database name
-$this->dbUser = '<dbUser>'; // database user name
-$this->dbPwd  = '<dbPwd>'; // database user password
+$this->dbName = 'oxid'; // database name
+$this->dbUser = 'root'; // database user name
+$this->dbPwd  = 'root'; // database user password
 $this->dbDriverOptions = []; // database driver options
 $this->dbUnixSocket = null; // unix domain socket, optional
-$this->sShopURL     = '<sShopURL>'; // eShop base url, required
+$this->sShopURL     = 'http://localhost:8080/oxidproject/source'; // eShop base url, required
 $this->sSSLShopURL  = null;            // eShop SSL url, optional
 $this->sAdminSSLURL = null;            // eShop Admin SSL url, optional
-$this->sShopDir     = '<sShopDir>';
-$this->sCompileDir  = '<sCompileDir>';
+$this->sShopDir     = '/var/www/html/oxidproject/source';
+$this->sCompileDir  = '/var/www/html/oxidproject/source/tmp';
 
 /**
  * Force shop edition. Even if enterprise or professional packages exists, shop edition can still be forced here.

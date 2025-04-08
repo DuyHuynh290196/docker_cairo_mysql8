@@ -1,0 +1,1 @@
+a:1:{s:7:"content";a:3:{s:32:"94a1d83200f3fc5d8ee8cddada351f77";s:36:"en/rss/OXID-eShop-6/Top-of-the-shop/";s:32:"32a00741289961a7e3c16bc15ac09374";s:44:"en/rss/OXID-eShop-6/Recent-products-in-shop/";s:32:"47a73595a56c52c756d2b0e26fc2d57d";s:34:"en/rss/Category/Kiteboarding-oxid/";}}
