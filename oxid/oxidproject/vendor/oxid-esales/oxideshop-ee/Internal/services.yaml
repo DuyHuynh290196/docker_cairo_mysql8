@@ -1,3 +1,0 @@
-imports:
-  - { resource: Transition/Adapter/services.yaml }
-  - { resource: Framework/services.yaml }

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
+class ComposerStaticInit345778c065177dfe862e26c21ccacf8a
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -17,8 +17,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -27,11 +25,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
             'Webmozart\\PathUtil\\' => 19,
             'Webmozart\\Glob\\' => 15,
             'Webmozart\\Assert\\' => 17,
-        ),
-        'U' => 
-        array (
-            'UnzerSDK\\examples\\' => 18,
-            'UnzerSDK\\' => 9,
         ),
         'T' => 
         array (
@@ -75,8 +68,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'P' => 
         array (
             'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
@@ -86,19 +77,14 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         ),
         'O' => 
         array (
-            'OxidSolutionCatalysts\\Unzer\\Tests\\' => 34,
-            'OxidSolutionCatalysts\\Unzer\\' => 28,
             'OxidProfessionalServices\\Usercentrics\\Tests\\' => 44,
             'OxidProfessionalServices\\Usercentrics\\' => 38,
             'OxidEsales\\WysiwygModule\\' => 25,
-            'OxidEsales\\VisualCmsModule\\' => 27,
             'OxidEsales\\UnifiedNameSpaceGenerator\\' => 37,
             'OxidEsales\\PayPalModule\\' => 24,
             'OxidEsales\\GdprOptinModule\\' => 27,
             'OxidEsales\\Facts\\' => 17,
             'OxidEsales\\Eshop\\' => 17,
-            'OxidEsales\\EshopProfessional\\' => 29,
-            'OxidEsales\\EshopEnterprise\\' => 27,
             'OxidEsales\\EshopCommunity\\' => 26,
             'OxidEsales\\DoctrineMigrationWrapper\\' => 36,
             'OxidEsales\\DemoDataInstaller\\' => 29,
@@ -119,12 +105,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'J' => 
         array (
             'JsonSchema\\' => 11,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
         ),
         'D' => 
         array (
@@ -160,14 +140,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'UnzerSDK\\examples\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/unzerdev/php-sdk/examples',
-        ),
-        'UnzerSDK\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/unzerdev/php-sdk/src',
         ),
         'TopConcepts\\Klarna\\' => 
         array (
@@ -293,15 +265,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Psr\\Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
-        ),
         'Psr\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
@@ -326,14 +289,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
-        'OxidSolutionCatalysts\\Unzer\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/oxid-esales/unzer/Tests',
-        ),
-        'OxidSolutionCatalysts\\Unzer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/oxid-esales/unzer/src',
-        ),
         'OxidProfessionalServices\\Usercentrics\\Tests\\' => 
         array (
             0 => __DIR__ . '/..' . '/oxid-professional-services/usercentrics/tests',
@@ -345,10 +300,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'OxidEsales\\WysiwygModule\\' => 
         array (
             0 => __DIR__ . '/../..' . '/source/modules/ddoe/wysiwyg',
-        ),
-        'OxidEsales\\VisualCmsModule\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/source/modules/ddoe/visualcms',
         ),
         'OxidEsales\\UnifiedNameSpaceGenerator\\' => 
         array (
@@ -369,14 +320,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'OxidEsales\\Eshop\\' => 
         array (
             0 => __DIR__ . '/..' . '/oxid-esales/oxideshop-unified-namespace-generator/generated/OxidEsales/Eshop',
-        ),
-        'OxidEsales\\EshopProfessional\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/oxid-esales/oxideshop-pe',
-        ),
-        'OxidEsales\\EshopEnterprise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/oxid-esales/oxideshop-ee',
         ),
         'OxidEsales\\EshopCommunity\\' => 
         array (
@@ -421,18 +364,6 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
         'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Doctrine\\Migrations\\' => 
         array (
@@ -528,10 +459,10 @@ class ComposerStaticInit013ad59d40e01f91b712496be087d2f5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit013ad59d40e01f91b712496be087d2f5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit013ad59d40e01f91b712496be087d2f5::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit013ad59d40e01f91b712496be087d2f5::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit013ad59d40e01f91b712496be087d2f5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit345778c065177dfe862e26c21ccacf8a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit345778c065177dfe862e26c21ccacf8a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit345778c065177dfe862e26c21ccacf8a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit345778c065177dfe862e26c21ccacf8a::$classMap;
 
         }, null, ClassLoader::class);
     }

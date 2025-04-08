@@ -1,216 +1,58 @@
 modules:
-  ddoewysiwyg:
-    id: ddoewysiwyg
-    path: ddoe/wysiwyg
-    version: 2.4.2
+  oxps_usercentrics:
+    id: oxps_usercentrics
+    path: oxps/usercentrics
+    version: 1.2.1
     configured: false
     title:
-      en: 'WYSIWYG Editor + Mediathek'
+      en: 'OXID Cookie Management powered by usercentrics'
     description:
-      de: ''
-      en: ''
+      de: "Die Usercentrics Consent Management Platform (CMP) ermöglicht Ihnen, Ihre Marketing- und Datenstrategie\n                 mit rechtlichen Anforderungen in Einklang zu bringen.</p>\n                 <h2>Registrieren Sie sich deshalb jetzt bei Usercentrics</h2>  \n                 <form target=\"_blank\" method=\"GET\" action=\"https://usercentrics.com/de/preise/?partnerid=16967#business-paket\">\n                     <input type=\"hidden\" name=\"partnerid\" value=\"16967\">\n                     <input style=\"background: #0A2; color: #fff; font-weight: bold;\" type=\"submit\" value=\"Jetzt registrieren\">\n                     <p>\n                         Sollte ein anderer Mitarbeiter in Ihrem Unternehmen die Registrierung durchführen, bitte dabei zwingend die OXID Partner-ID 16967 angeben, um die Integration vollständig nutzen zu können. Zu diesem Zweck können Sie diesen Link weitergeben: https://usercentrics.com/de/preise/?partnerid=16967#business-paket\n                     </p>\n                 </form>\n                 "
+      en: "The Usercentrics Consent Management Platform (CMP) enables you to harmonize your marketing and data \n                 strategy with legal requirements.</p>\n                 <h2>Register now for Usercentrics</h2>  \n                 <form target=\"_blank\" method=\"GET\" action=\"https://usercentrics.com/pricing/?partnerid=16967#business-package\">               \n                     <input type=\"hidden\" name=\"partnerid\" value=\"16967\">\n                     <input style=\"background: #0A2; color: #fff; font-weight: bold;\" type=\"submit\" value=\"Register Now\">\n                     <p>\n                         If another employee in your company registers, please make sure to enter the OXID partner ID 16967 in order to be able to fully use the integration. For that reason you can forward this link to them: https://usercentrics.com/pricing/?partnerid=16967#business-package\n                     </p>\n                 </form>\n                 "
     lang: ''
-    thumbnail: logo.png
-    author: 'OXID eSales AG & digidesk - media solutions'
-    url: 'http://www.oxid-esales.com'
-    email: info@oxid-esales.com
+    thumbnail: ''
+    author: 'OXID Professional Services'
+    url: ''
+    email: ''
     classExtensions:
-      OxidEsales\Eshop\Application\Controller\TextEditorHandler: OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
-      OxidEsales\Eshop\Core\ViewConfig: OxidEsales\WysiwygModule\Core\ViewConfig
-      OxidEsales\Eshop\Core\Language: OxidEsales\WysiwygModule\Core\Language
-      OxidEsales\Eshop\Core\Utils: OxidEsales\WysiwygModule\Core\Utils
-    controllers:
-      ddoewysiwyglangjs: OxidEsales\WysiwygModule\Application\Controller\WysiwygLangJs
-      ddoewysiwygmedia_view: OxidEsales\WysiwygModule\Application\Controller\Admin\WysiwygMedia
-      ddoewysiwygmedia_wrapper: OxidEsales\WysiwygModule\Application\Controller\Admin\WysiwygMediaWrapper
-    events:
-      onActivate: '\OxidEsales\WysiwygModule\Core\Events::onActivate'
-      onDeactivate: '\OxidEsales\WysiwygModule\Core\Events::onDeactivate'
-    templates:
-      ddoewysiwyg.tpl: ddoe/wysiwyg/Application/views/admin/tpl/ddoewysiwyg.tpl
-      dialog/ddoewysiwygmedia.tpl: ddoe/wysiwyg/Application/views/admin/tpl/dialog/ddoewysiwygmedia.tpl
-      dialog/ddoewysiwygmedia_wrapper.tpl: ddoe/wysiwyg/Application/views/admin/tpl/dialog/ddoewysiwygmedia_wrapper.tpl
-  tcklarna:
-    id: tcklarna
-    path: tc/tcklarna
-    version: 5.5.3
-    configured: false
-    title:
-      en: 'Klarna Checkout and Klarna Payments'
-    description:
-      de: 'Egal was Sie verkaufen, unsere Produkte sind dafür gemacht, Ihren Kunden das beste Erlebnis zu bereiten. Das gefällt nicht nur Ihnen, sondern auch uns! Die Klarna Plugins werden stets auf Herz und Nieren geprüft und können ganz einfach durch Sie oder Ihre technischen Ansprechpartner aktiviert werden. Das nennen wir smoooth. Hier können Sie sowohl Klarna Payments aktivieren und anschließend genau die Zahlarten auswählen, die Sie wünschen oder mit der Komplettlösung, dem Klarna Checkout, Ihre Customer Journey optimieren. Erfahren Sie hier mehr zu Klarna für OXID: <a href="https://www.klarna.com/de/verkaeufer/oxid/">https://www.klarna.com/de/verkaeufer/oxid/</a> Und so einfach ist die Integration: <a href="https://hello.klarna.com/rs/778-XGY-327/images/How_to_OXID.mp4" target="_blank">Zum Video</a>'
-      en: 'No matter what you sell, our products are made to give your customers the best purchase experience. This is not only smoooth for you - it is smoooth for us, too! Klarna plugins are always tested and can be activated by you or your technical contact with just a few clicks. That is smoooth. Here you can activate Klarna Payments and then select exactly the payment methods you want or optimize your customer journey with the complete Klarna Checkout solution. Find out more about Klarna for OXID: <a href="https://www.klarna.com/de/verkaeufer/oxid/" target="_blank">https://www.klarna.com/de/verkaeufer/oxid/</a> Integrating Klarna at OXID is easy as pie: <a href="https://hello.klarna.com/rs/778-XGY-327/images/How_to_OXID.mp4" target="_blank">to the video (click)</a>'
-    lang: ''
-    thumbnail: /out/admin/src/img/klarna_lockup_black.jpg
-    author: '<a href="https://www.fatchip.de" target="_blank">FATCHIP GmbH</a>'
-    url: 'https://www.klarna.com/de/verkaeufer/plattformen-und-partner/oxid/'
-    email: oxid@klarna.com
-    classExtensions:
-      OxidEsales\Eshop\Application\Model\Basket: TopConcepts\Klarna\Model\KlarnaBasket
-      OxidEsales\Eshop\Application\Model\User: TopConcepts\Klarna\Model\KlarnaUser
-      OxidEsales\Eshop\Application\Model\Article: TopConcepts\Klarna\Model\KlarnaArticle
-      OxidEsales\Eshop\Application\Model\Order: TopConcepts\Klarna\Model\KlarnaOrder
-      OxidEsales\Eshop\Application\Model\Address: TopConcepts\Klarna\Model\KlarnaAddress
-      OxidEsales\Eshop\Application\Model\Payment: TopConcepts\Klarna\Model\KlarnaPayment
-      OxidEsales\Eshop\Application\Model\CountryList: TopConcepts\Klarna\Model\KlarnaCountryList
-      OxidEsales\Eshop\Application\Model\OrderArticle: TopConcepts\Klarna\Model\KlarnaOrderArticle
-      OxidEsales\Eshop\Application\Model\UserPayment: TopConcepts\Klarna\Model\KlarnaUserPayment
-      OxidEsales\Eshop\Application\Controller\ThankYouController: TopConcepts\Klarna\Controller\KlarnaThankYouController
-      OxidEsales\Eshop\Core\ViewConfig: TopConcepts\Klarna\Controller\KlarnaViewConfig
-      OxidEsales\Eshop\Application\Controller\OrderController: TopConcepts\Klarna\Controller\KlarnaOrderController
-      OxidEsales\Eshop\Application\Controller\UserController: TopConcepts\Klarna\Controller\KlarnaUserController
-      OxidEsales\Eshop\Application\Controller\PaymentController: TopConcepts\Klarna\Controller\KlarnaPaymentController
-      OxidEsales\Eshop\Application\Controller\BasketController: TopConcepts\Klarna\Controller\KlarnaBasketController
-      OxidEsales\Eshop\Application\Controller\Admin\OrderAddress: TopConcepts\Klarna\Controller\Admin\KlarnaOrderAddress
-      OxidEsales\Eshop\Application\Controller\Admin\OrderList: TopConcepts\Klarna\Controller\Admin\KlarnaOrderList
-      OxidEsales\Eshop\Application\Controller\Admin\OrderArticle: TopConcepts\Klarna\Controller\Admin\KlarnaOrderArticle
-      OxidEsales\Eshop\Application\Controller\Admin\OrderMain: TopConcepts\Klarna\Controller\Admin\KlarnaOrderMain
-      OxidEsales\Eshop\Application\Controller\Admin\OrderOverview: TopConcepts\Klarna\Controller\Admin\KlarnaOrderOverview
-      OxidEsales\Eshop\Application\Controller\Admin\PaymentMain: TopConcepts\Klarna\Controller\Admin\KlarnaPaymentMain
-      OxidEsales\Eshop\Application\Component\BasketComponent: TopConcepts\Klarna\Component\KlarnaBasketComponent
-      OxidEsales\Eshop\Application\Component\UserComponent: TopConcepts\Klarna\Component\KlarnaUserComponent
-      OxidEsales\Eshop\Application\Component\Widget\ServiceMenu: TopConcepts\Klarna\Component\Widgets\KlarnaServiceMenu
-      OxidEsales\Eshop\Core\Config: TopConcepts\Klarna\Core\Config
-      OxidEsales\Eshop\Application\Model\PaymentGateway: TopConcepts\Klarna\Model\PaymentGateway
-      OxidEsales\Eshop\Core\ShopControl: TopConcepts\Klarna\Core\KlarnaShopControl
-    controllers:
-      KlarnaStart: TopConcepts\Klarna\Controller\Admin\KlarnaStart
-      KlarnaGeneral: TopConcepts\Klarna\Controller\Admin\KlarnaGeneral
-      KlarnaConfiguration: TopConcepts\Klarna\Controller\Admin\KlarnaConfiguration
-      KlarnaDesign: TopConcepts\Klarna\Controller\Admin\KlarnaDesign
-      KlarnaExternalPayments: TopConcepts\Klarna\Controller\Admin\KlarnaExternalPayments
-      KlarnaEmdAdmin: TopConcepts\Klarna\Controller\Admin\KlarnaEmdAdmin
-      KlarnaOrders: TopConcepts\Klarna\Controller\Admin\KlarnaOrders
-      KlarnaMessaging: TopConcepts\Klarna\Controller\Admin\KlarnaMessaging
-      KlarnaShipping: TopConcepts\Klarna\Controller\Admin\KlarnaShipping
-      KlarnaExpress: TopConcepts\Klarna\Controller\KlarnaExpressController
-      KlarnaAjax: TopConcepts\Klarna\Controller\KlarnaAjaxController
-      KlarnaEpmDispatcher: TopConcepts\Klarna\Controller\KlarnaEpmDispatcher
-      KlarnaAcknowledge: TopConcepts\Klarna\Controller\KlarnaAcknowledgeController
-      KlarnaValidate: TopConcepts\Klarna\Controller\KlarnaValidationController
-    events:
-      onActivate: '\TopConcepts\Klarna\Core\KlarnaInstaller::onActivate'
-      onDeactivate: '\TopConcepts\Klarna\Core\KlarnaInstaller::onDeactivate'
+      OxidEsales\Eshop\Core\ViewHelper\JavaScriptRenderer: OxidProfessionalServices\Usercentrics\Core\ScriptRenderer
+      OxidEsales\Eshop\Core\ViewConfig: OxidProfessionalServices\Usercentrics\Core\ViewConfig
+    moduleSettings:
+      usercentricsId:
+        group: usercentrics_main
+        type: str
+        value: ''
+      smartDataProtectorActive:
+        group: usercentrics_advanced
+        type: bool
+        value: true
+      smartDataProtectorDeactivateBlocking:
+        group: usercentrics_advanced
+        type: str
+        value: ''
+      usercentricsMode:
+        group: usercentrics_advanced
+        type: select
+        value: CmpV2
+        constraints:
+          - CmpV1
+          - CmpV2
+          - CmpV2Legacy
+          - CmpV2Tcf
+          - CmpV2TcfLegacy
+          - Custom
+      developmentAutomaticConsent:
+        type: bool
+        value: false
     templateBlocks:
       -
-        template: widget/minibasket/minibasket.tpl
-        block: widget_minibasket
-        file: views/blocks/minibasket_widget_minibasket.tpl
+        template: layout/base.tpl
+        block: base_js
+        file: src/views/blocks/base_js.tpl
       -
-        template: page/shop/start.tpl
-        block: start_manufacturer_slider
-        file: views/blocks/start_widget_manufacturer.tpl
-      -
-        template: layout/header.tpl
-        block: header_main
-        file: views/blocks/header_main.tpl
-      -
-        template: page/details/inc/productmain.tpl
-        block: details_productmain_variantselections
-        file: views/blocks/productmain_variantselection.tpl
-      -
-        template: layout/footer.tpl
-        block: footer_main
-        file: views/blocks/footer_footer_main.tpl
-      -
-        template: page/checkout/payment.tpl
-        block: select_payment
-        file: views/blocks/payment_select_payment.tpl
-      -
-        template: page/checkout/basket.tpl
-        block: checkout_basket_next_step_top
-        file: views/blocks/basket_checkout_basket_next_step_top.tpl
-      -
-        template: page/checkout/inc/basketcontents.tpl
-        block: checkout_basketcontents_summary
-        file: views/blocks/checkout_basketcontents_summary.tpl
-      -
-        template: page/checkout/payment.tpl
-        block: change_payment
-        file: views/blocks/payment_change_payment.tpl
-      -
-        template: page/checkout/order.tpl
-        block: order_basket
-        file: views/blocks/order_order_basket.tpl
-      -
-        template: page/checkout/order.tpl
-        block: shippingAndPayment
-        file: views/blocks/order_shippingAndPayment.tpl
-      -
-        template: page/checkout/order.tpl
-        block: checkout_order_next_step_bottom
-        file: views/blocks/order_checkout_order_next_step_bottom.tpl
-      -
-        template: page/details/inc/productmain.tpl
-        block: details_productmain_tobasket
-        file: views/blocks/productmain_details_productmain_tobasket.tpl
-      -
-        template: page/checkout/thankyou.tpl
-        block: checkout_thankyou_info
-        file: views/blocks/thankyou_checkout_thankyou_info.tpl
-      -
-        template: page/checkout/inc/steps.tpl
-        block: checkout_steps_main
-        file: views/blocks/steps_checkout_steps_main.tpl
-      -
-        template: form/fieldset/user_billing.tpl
-        block: form_user_billing_country
-        file: views/blocks/user_billing_form_user_billing_country.tpl
-      -
-        template: layout/footer.tpl
-        block: footer_main
-        file: views/blocks/tcklarna_law_notice.tpl
-      -
-        template: order_main.tpl
-        block: admin_order_main_form
-        file: views/blocks/admin/order_main_admin_order_main_form.tpl
-      -
-        template: email/html/order_cust.tpl
-        block: email_html_order_cust_paymentinfo_top
-        file: views/blocks/order_cust_email_html_order_cust_paymentinfo_top.tpl
-      -
-        template: form/fieldset/user_shipping.tpl
-        block: form_user_shipping_country
-        file: views/blocks/user_shipping_form_user_shipping_country.tpl
-      -
-        template: order_overview.tpl
-        block: admin_order_overview_billingaddress
-        file: views/blocks/admin/order_overview_admin_order_overview_billingaddress.tpl
-      -
-        template: order_article.tpl
-        block: admin_order_article_header
-        file: views/blocks/admin/order_article_admin_order_article_header.tpl
-      -
-        template: order_list.tpl
-        block: admin_order_list_filter
-        file: views/blocks/admin/order_list_admin_order_list_filter.tpl
-      -
-        template: payment_main.tpl
-        block: admin_payment_main_form
-        file: views/blocks/admin/payment_main_admin_payment_main_form.tpl
-    templates:
-      tcklarna_checkout.tpl: tc/tcklarna/views/tpl/checkout/tcklarna_checkout.tpl
-      tcklarna_amazon_login.tpl: tc/tcklarna/views/tpl/checkout/tcklarna_amazon_login.tpl
-      tcklarna_checkout_voucher_data.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_data.tpl
-      tcklarna_checkout_voucher_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_box.tpl
-      tcklarna_checkout_voucher_errors.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_errors.tpl
-      tcklarna_json.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_json.tpl
-      tcklarna_country_select_popup.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_country_select_popup.tpl
-      tcklarna_checkout_login_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_login_box.tpl
-      tcklarna_checkout_address_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_address_box.tpl
-      tcklarna_general.tpl: tc/tcklarna/views/admin/tpl/tcklarna_general.tpl
-      tcklarna_design.tpl: tc/tcklarna/views/admin/tpl/tcklarna_design.tpl
-      tcklarna_kco_config.tpl: tc/tcklarna/views/admin/tpl/tcklarna_kco_config.tpl
-      tcklarna_kp_config.tpl: tc/tcklarna/views/admin/tpl/tcklarna_kp_config.tpl
-      tcklarna_start.tpl: tc/tcklarna/views/admin/tpl/tcklarna_start.tpl
-      tcklarna_external_payments.tpl: tc/tcklarna/views/admin/tpl/tcklarna_external_payments.tpl
-      tcklarna_emd_admin.tpl: tc/tcklarna/views/admin/tpl/tcklarna_emd_admin.tpl
-      tcklarna_orders.tpl: tc/tcklarna/views/admin/tpl/tcklarna_orders.tpl
-      tcklarna_messaging.tpl: tc/tcklarna/views/admin/tpl/tcklarna_messaging.tpl
-      tcklarna_shipping.tpl: tc/tcklarna/views/admin/tpl/tcklarna_shipping.tpl
-      tcklarna_country_creds.tpl: tc/tcklarna/views/admin/tpl/tcklarna_country_creds.tpl
-      tcklarna_header.tpl: tc/tcklarna/views/admin/tpl/tcklarna_header.tpl
-      tcklarna_lang_spec_conf.tpl: tc/tcklarna/views/admin/tpl/tcklarna_lang_spec_conf.tpl
+        template: layout/base.tpl
+        block: head_meta_description
+        file: src/views/blocks/head_meta_description.tpl
   oegdproptin:
     id: oegdproptin
     path: oe/gdproptin
@@ -302,651 +144,6 @@ modules:
         template: widget/reviews/reviews.tpl
         block: widget_reviews_form_fields
         file: Application/views/blocks/widget_reviews_form_fields.tpl
-  makaira_oxid-connect-essential:
-    id: makaira_oxid-connect-essential
-    path: makaira/oxid-connect-essential
-    version: 1.4.5
-    configured: false
-    title:
-      en: 'Makaira Connect Essential'
-    description:
-      en: 'This module provides required endpoints to import product data into Makaira.'
-    lang: ''
-    thumbnail: makaira.jpg
-    author: 'Makaira GmbH'
-    url: 'https://www.makaira.io/'
-    email: support@makaira.io
-    classExtensions:
-      OxidEsales\Eshop\Core\Output: Makaira\OxidConnectEssential\Oxid\Core\MakairaConnectOutput
-      OxidEsales\Eshop\Application\Controller\Admin\ArticleAttributeAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleAttributeAjax
-      OxidEsales\Eshop\Application\Controller\Admin\ArticleCrosssellingAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleCrossSellingAjax
-      OxidEsales\Eshop\Application\Controller\Admin\ArticleExtendAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleExtendAjax
-      OxidEsales\Eshop\Application\Controller\Admin\ArticleSelectionAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleSelectionAjax
-      OxidEsales\Eshop\Application\Controller\Admin\AttributeMainAjax: Makaira\OxidConnectEssential\Controller\Admin\AttributeMainAjax
-      OxidEsales\Eshop\Application\Controller\Admin\CategoryOrderAjax: Makaira\OxidConnectEssential\Controller\Admin\CategoryOrderAjax
-      OxidEsales\Eshop\Application\Controller\Admin\ManufacturerMainAjax: Makaira\OxidConnectEssential\Controller\Admin\ManufacturerMainAjax
-      OxidEsales\Eshop\Application\Controller\Admin\SelectListMainAjax: Makaira\OxidConnectEssential\Controller\Admin\SelectListMainAjax
-    controllers:
-      MakairaReviewController: Makaira\OxidConnectEssential\Controller\ReviewController
-      MakairaUserController: Makaira\OxidConnectEssential\Controller\UserController
-      MakairaCartController: Makaira\OxidConnectEssential\Controller\CartController
-      makaira_connect_endpoint: Makaira\OxidConnectEssential\Controller\Endpoint
-    events:
-      onActivate: 'Makaira\OxidConnectEssential\Core\ModuleEvents::onActivate'
-    moduleSettings:
-      makaira_connect_secret:
-        group: SETTINGS
-        type: str
-        value: ''
-      makaira_connect_category_inheritance:
-        group: SETTINGS
-        type: bool
-        value: false
-      makaira_field_blacklist_product:
-        group: IMPORTFIELDSANDATTS
-        type: arr
-        value:
-          - OXAMITEMID
-          - OXAMTASKID
-          - OXBUNDLEID
-          - OXEXTURL
-          - OXFOLDER
-          - OXNOSTOCKTEXT
-          - OXPIC8
-          - OXPIC9
-          - OXPIC10
-          - OXPIC11
-          - OXPIC12
-          - OXQUESTIONEMAIL
-          - OXREMINDACTIVE
-          - OXREMINDAMOUNT
-          - OXSHOWCUSTOMAGREEMENT
-          - OXSKIPDISCOUNTS
-          - OXSTOCKTEXT
-          - OXSUBCLASS
-          - OXTEMPLATE
-          - OXUPDATEPRICE
-          - OXUPDATEPRICEA
-          - OXUPDATEPRICEB
-          - OXUPDATEPRICEC
-          - OXUPDATEPRICETIME
-          - OXURLDESC
-          - OXURLIMG
-          - OXPIXIEXPORT
-          - OXPIXIEXPORTED
-          - OXORDERINFO
-          - OXVPE
-      makaira_field_blacklist_category:
-        group: IMPORTFIELDSANDATTS
-        type: arr
-        value:
-          - OXVAT
-          - OXSKIPDISCOUNTS
-      makaira_field_blacklist_manufacturer:
-        group: IMPORTFIELDSANDATTS
-        type: arr
-        value: {  }
-      makaira_attribute_as_int:
-        group: IMPORTFIELDSANDATTS
-        type: arr
-        value: {  }
-      makaira_attribute_as_float:
-        group: IMPORTFIELDSANDATTS
-        type: arr
-        value: {  }
-      makaira_tracking_page_id:
-        group: TRACKING_PRIVACY
-        type: str
-        value: ''
-  oxps_usercentrics:
-    id: oxps_usercentrics
-    path: oxps/usercentrics
-    version: 1.2.1
-    configured: false
-    title:
-      en: 'OXID Cookie Management powered by usercentrics'
-    description:
-      de: "Die Usercentrics Consent Management Platform (CMP) ermöglicht Ihnen, Ihre Marketing- und Datenstrategie\n                 mit rechtlichen Anforderungen in Einklang zu bringen.</p>\n                 <h2>Registrieren Sie sich deshalb jetzt bei Usercentrics</h2>  \n                 <form target=\"_blank\" method=\"GET\" action=\"https://usercentrics.com/de/preise/?partnerid=16967#business-paket\">\n                     <input type=\"hidden\" name=\"partnerid\" value=\"16967\">\n                     <input style=\"background: #0A2; color: #fff; font-weight: bold;\" type=\"submit\" value=\"Jetzt registrieren\">\n                     <p>\n                         Sollte ein anderer Mitarbeiter in Ihrem Unternehmen die Registrierung durchführen, bitte dabei zwingend die OXID Partner-ID 16967 angeben, um die Integration vollständig nutzen zu können. Zu diesem Zweck können Sie diesen Link weitergeben: https://usercentrics.com/de/preise/?partnerid=16967#business-paket\n                     </p>\n                 </form>\n                 "
-      en: "The Usercentrics Consent Management Platform (CMP) enables you to harmonize your marketing and data \n                 strategy with legal requirements.</p>\n                 <h2>Register now for Usercentrics</h2>  \n                 <form target=\"_blank\" method=\"GET\" action=\"https://usercentrics.com/pricing/?partnerid=16967#business-package\">               \n                     <input type=\"hidden\" name=\"partnerid\" value=\"16967\">\n                     <input style=\"background: #0A2; color: #fff; font-weight: bold;\" type=\"submit\" value=\"Register Now\">\n                     <p>\n                         If another employee in your company registers, please make sure to enter the OXID partner ID 16967 in order to be able to fully use the integration. For that reason you can forward this link to them: https://usercentrics.com/pricing/?partnerid=16967#business-package\n                     </p>\n                 </form>\n                 "
-    lang: ''
-    thumbnail: ''
-    author: 'OXID Professional Services'
-    url: ''
-    email: ''
-    classExtensions:
-      OxidEsales\Eshop\Core\ViewHelper\JavaScriptRenderer: OxidProfessionalServices\Usercentrics\Core\ScriptRenderer
-      OxidEsales\Eshop\Core\ViewConfig: OxidProfessionalServices\Usercentrics\Core\ViewConfig
-    moduleSettings:
-      usercentricsId:
-        group: usercentrics_main
-        type: str
-        value: ''
-      smartDataProtectorActive:
-        group: usercentrics_advanced
-        type: bool
-        value: true
-      smartDataProtectorDeactivateBlocking:
-        group: usercentrics_advanced
-        type: str
-        value: ''
-      usercentricsMode:
-        group: usercentrics_advanced
-        type: select
-        value: CmpV2
-        constraints:
-          - CmpV1
-          - CmpV2
-          - CmpV2Legacy
-          - CmpV2Tcf
-          - CmpV2TcfLegacy
-          - Custom
-      developmentAutomaticConsent:
-        type: bool
-        value: false
-    templateBlocks:
-      -
-        template: layout/base.tpl
-        block: base_js
-        file: src/views/blocks/base_js.tpl
-      -
-        template: layout/base.tpl
-        block: head_meta_description
-        file: src/views/blocks/head_meta_description.tpl
-  osc-unzer:
-    id: osc-unzer
-    path: osc/unzer
-    version: 1.2.1
-    configured: false
-    title:
-      de: 'Unzer Payment für OXID'
-      en: 'Unzer Payment for OXID'
-    description:
-      de: "Vor dem Start bitte lesen und prüfen:\n            <ul>\n                <li><a href=\"https://docs.unzer.com/online-payments/go-live-checklist/\" target=\"_blank\">Go-live checklist</a></li>\n                <li><a href=\"https://insights.unzer.com/\" target=\"_blank\">Prüfen Sie Ihren Account und Ihre Zahlarten direkt bei Unzer</a></li>\n            </ul>"
-      en: "Please read and check before you start:\n            <ul>\n                <li><a href=\"https://docs.unzer.com/online-payments/go-live-checklist/\" target=\"_blank\">Go-live checklist</a></li>\n                <li><a href=\"https://insights.unzer.com/\" target=\"_blank\">Check your account and your payments at unzer</a></li>\n            </ul>"
-    lang: ''
-    thumbnail: logo.svg
-    author: 'OXID eSales AG'
-    url: 'https://www.oxid-esales.com'
-    email: info@oxid-esales.com
-    classExtensions:
-      OxidEsales\Eshop\Core\Config: OxidSolutionCatalysts\Unzer\Core\Config
-      OxidEsales\Eshop\Core\ShopControl: OxidSolutionCatalysts\Unzer\Core\ShopControl
-      OxidEsales\Eshop\Core\ViewConfig: OxidSolutionCatalysts\Unzer\Core\ViewConfig
-      OxidEsales\Eshop\Application\Controller\OrderController: OxidSolutionCatalysts\Unzer\Controller\OrderController
-      OxidEsales\Eshop\Application\Controller\PaymentController: OxidSolutionCatalysts\Unzer\Controller\PaymentController
-      OxidEsales\Eshop\Application\Controller\ThankYouController: OxidSolutionCatalysts\Unzer\Controller\ThankYouController
-      OxidEsales\Eshop\Application\Controller\Admin\ModuleConfiguration: OxidSolutionCatalysts\Unzer\Controller\Admin\ModuleConfiguration
-      OxidEsales\Eshop\Application\Controller\Admin\OrderList: OxidSolutionCatalysts\Unzer\Controller\Admin\OrderList
-      OxidEsales\Eshop\Application\Controller\Admin\OrderMain: OxidSolutionCatalysts\Unzer\Controller\Admin\OrderMain
-      OxidEsales\Eshop\Application\Model\Article: OxidSolutionCatalysts\Unzer\Model\Article
-      OxidEsales\Eshop\Application\Model\Order: OxidSolutionCatalysts\Unzer\Model\Order
-      OxidEsales\Eshop\Application\Model\Payment: OxidSolutionCatalysts\Unzer\Model\Payment
-    controllers:
-      unzer_admin_order: OxidSolutionCatalysts\Unzer\Controller\Admin\AdminOrderController
-      unzer_dispatcher: OxidSolutionCatalysts\Unzer\Controller\DispatcherController
-      unzer_installment: OxidSolutionCatalysts\Unzer\Controller\InstallmentController
-      unzer_applepay_callback: OxidSolutionCatalysts\Unzer\Controller\ApplePayCallbackController
-      unzer_saved_payments: OxidSolutionCatalysts\Unzer\Controller\AccountSavedPaymentController
-    events:
-      onActivate: '\OxidSolutionCatalysts\Unzer\Core\Events::onActivate'
-      onDeactivate: '\OxidSolutionCatalysts\Unzer\Core\Events::onDeActivate'
-    moduleSettings:
-      UnzerSystemMode:
-        group: unzerenvironment
-        type: select
-        value: '0'
-        constraints:
-          - '0'
-          - '1'
-      UnzerDebug:
-        group: unzerenvironment
-        type: bool
-        value: false
-      sandbox-UnzerPublicKey:
-        group: unzermerchant
-        type: str
-        value: ''
-      sandbox-UnzerPrivateKey:
-        group: unzermerchant
-        type: str
-        value: ''
-      production-UnzerPublicKey:
-        group: unzermerchant
-        type: str
-        value: ''
-      production-UnzerPrivateKey:
-        group: unzermerchant
-        type: str
-        value: ''
-      webhookConfiguration:
-        group: unzerwebhooks
-        type: arr
-        value: {  }
-      UnzerOption_oscunzer_card:
-        group: unzercard
-        type: select
-        value: '0'
-        constraints:
-          - '0'
-          - '1'
-      UnzerOption_oscunzer_paypal:
-        group: unzerpaypal
-        type: select
-        value: '0'
-        constraints:
-          - '0'
-          - '1'
-      applepay_merchant_capabilities:
-        group: unzerapplepay
-        type: aarr
-        value:
-          supportsCredit: '1'
-          supportsDebit: '1'
-      applepay_networks:
-        group: unzerapplepay
-        type: aarr
-        value:
-          maestro: '1'
-          masterCard: '1'
-          visa: '1'
-      applepay_label:
-        group: unzerapplepay
-        type: str
-        value: 'default lable please change'
-      sandbox-applepay_merchant_identifier:
-        group: unzerapplepay
-        type: str
-        value: ''
-      sandbox-applepay_merchant_cert:
-        group: unzerapplepay
-        type: str
-        value: ''
-      sandbox-applepay_merchant_cert_key:
-        group: unzerapplepay
-        type: str
-        value: ''
-      production-applepay_merchant_identifier:
-        group: unzerapplepay
-        type: str
-        value: ''
-      production-applepay_merchant_cert:
-        group: unzerapplepay
-        type: str
-        value: ''
-      production-applepay_merchant_cert_key:
-        group: unzerapplepay
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2CEURPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2CEURPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2BEURPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2BEURPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2CCHFPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2CCHFPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2BCHFPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInvoiceB2BCHFPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      production-UnzerPayLaterInstallmentB2CEURPrivateKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      production-UnzerPayLaterInstallmentB2CEURPublicKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      production-UnzerPayLaterInstallmentB2CCHFPrivateKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      production-UnzerPayLaterInstallmentB2CCHFPublicKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2CEURPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2CEURPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2BEURPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2BEURPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2CCHFPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2CCHFPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2BCHFPrivateKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInvoiceB2BCHFPublicKey:
-        group: unzerinvoice
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInstallmentB2CEURPrivateKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInstallmentB2CEURPublicKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInstallmentB2CCHFPrivateKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      sandbox-UnzerPayLaterInstallmentB2CCHFPublicKey:
-        group: unzerpaylater
-        type: str
-        value: ''
-      UnzerjQuery:
-        group: unzerother
-        type: bool
-        value: false
-      UnzerWebhookTimeDifference:
-        group: unzerother
-        type: str
-        value: '5'
-      sandboxApplePayPaymentKeyId:
-        type: str
-        value: ''
-      sandboxApplePayPaymentCertificateId:
-        type: str
-        value: ''
-      productionApplePayPaymentKeyId:
-        type: str
-        value: ''
-      productionApplePayPaymentCertificateId:
-        type: str
-        value: ''
-    templateBlocks:
-      -
-        template: page/checkout/order.tpl
-        block: shippingAndPayment
-        file: views/frontend/blocks/page/checkout/shippingAndPayment.tpl
-      -
-        template: page/checkout/order.tpl
-        block: checkout_order_errors
-        file: views/frontend/blocks/page/checkout/checkout_order_errors.tpl
-      -
-        template: page/checkout/order.tpl
-        block: checkout_order_btn_submit_bottom
-        file: views/frontend/blocks/page/checkout/checkout_order_btn_submit_bottom.tpl
-      -
-        template: page/checkout/payment.tpl
-        block: select_payment
-        file: views/frontend/blocks/page/checkout/select_payment.tpl
-      -
-        template: page/account/inc/account_menu.tpl
-        block: account_menu
-        file: views/frontend/blocks/page/account/inc/account_menu.tpl
-      -
-        template: page/checkout/thankyou.tpl
-        block: checkout_thankyou_info
-        file: views/frontend/blocks/page/checkout/thank_you_info.tpl
-      -
-        template: module_config.tpl
-        block: admin_module_config_var
-        file: views/admin/blocks/admin_module_config_var.tpl
-      -
-        template: order_list.tpl
-        block: admin_order_list_item
-        file: views/admin/blocks/admin_order_list_item.tpl
-      -
-        template: email/plain/order_cust.tpl
-        block: email_plain_order_cust_paymentinfo
-        file: views/frontend/blocks/email/plain/email_plain_order_cust_paymentinfo.tpl
-      -
-        template: email/html/order_cust.tpl
-        block: email_html_order_cust_paymentinfo
-        file: views/frontend/blocks/email/html/email_html_order_cust_paymentinfo.tpl
-    templates:
-      oscunzer_order.tpl: osc/unzer/views/admin/tpl/oscunzer_order.tpl
-      modules/osc/unzer/unzer_assets.tpl: osc/unzer/views/frontend/tpl/order/unzer_assets.tpl
-      modules/osc/unzer/unzer_card.tpl: osc/unzer/views/frontend/tpl/order/unzer_card.tpl
-      modules/osc/unzer/unzer_paypal.tpl: osc/unzer/views/frontend/tpl/order/unzer_paypal.tpl
-      modules/osc/unzer/unzer_eps_charge.tpl: osc/unzer/views/frontend/tpl/order/unzer_eps_charge.tpl
-      modules/osc/unzer/unzer_installment.tpl: osc/unzer/views/frontend/tpl/order/unzer_installment.tpl
-      modules/osc/unzer/unzer_installment_confirm.tpl: osc/unzer/views/frontend/tpl/order/unzer_installment_confirm.tpl
-      modules/osc/unzer/unzer_installment_confirm_flow.tpl: osc/unzer/views/frontend/tpl/order/unzer_installment_confirm_flow.tpl
-      modules/osc/unzer/unzer_installment_confirm_wave.tpl: osc/unzer/views/frontend/tpl/order/unzer_installment_confirm_wave.tpl
-      modules/osc/unzer/unzer_invoice.tpl: osc/unzer/views/frontend/tpl/order/unzer_invoice.tpl
-      modules/osc/unzer/unzer_applepay.tpl: osc/unzer/views/frontend/tpl/order/unzer_applepay.tpl
-      modules/osc/unzer/unzer_sepa.tpl: osc/unzer/views/frontend/tpl/order/unzer_sepa.tpl
-      modules/osc/unzer/unzer_sepa_secured.tpl: osc/unzer/views/frontend/tpl/order/unzer_sepa_secured.tpl
-      modules/osc/unzer/unzer_installment_paylater.tpl: osc/unzer/views/frontend/tpl/order/unzer_installment_paylater.tpl
-      modules/osc/unzer/unzer_ideal.tpl: osc/unzer/views/frontend/tpl/order/unzer_ideal.tpl
-      modules/osc/unzer/unzer_shippingAndPayment_flow.tpl: osc/unzer/views/frontend/tpl/order/unzer_shippingAndPayment_flow.tpl
-      modules/osc/unzer/unzer_shippingAndPayment_wave.tpl: osc/unzer/views/frontend/tpl/order/unzer_shippingAndPayment_wave.tpl
-      modules/osc/unzer/message/js-errors.tpl: osc/unzer/views/frontend/tpl/message/js-errors.tpl
-      modules/osc/unzer/payment/applepay_availibility_check.tpl: osc/unzer/views/frontend/tpl/payment/applepay_availibility_check.tpl
-      modules/osc/unzer/payment/payment_unzer.tpl: osc/unzer/views/frontend/tpl/payment/payment_unzer.tpl
-      modules/osc/unzer/order/applepay_button.tpl: osc/unzer/views/frontend/tpl/order/applepay_button.tpl
-      modules/osc/unzer/account_saved_payments.tpl: osc/unzer/views/frontend/tpl/account/account_saved_payments.tpl
-  fcpayone:
-    id: fcpayone
-    path: fc/fcpayone
-    version: 1.9.0
-    configured: false
-    title:
-      en: 'PAYONE Payment f&uuml;r OXID eShop'
-    description:
-      en: "Sie suchen nach der optimalen Payment-L&ouml;sung f&uuml;r Ihren Online-Shop?<br><br>\n                        PAYONE bietet Unternehmensl&ouml;sungen zur automatisierten und ganzheitlichen Abwicklung aller Zahlungsprozesse im E-Commerce. \n                        Der Payment Service Provider ist ein Unternehmen der Sparkassen-Finanzgruppe und von der Bundesanstalt f&uuml;r Finanzdienstleistungsaufsicht als Zahlungsinstitut zugelassen. \n                        Das Leistungsspektrum umfasst die Akzeptanz und Abwicklung nationaler und internationaler Zahlungsarten sowie alle Zahlungsdienstleistungen. \n                        Standardisierte Schnittstellen und Extensions erlauben eine einfache Integration in bestehende E-Commerce und IT-Systeme bei h&ouml;chsten Sicherheitsstandards.<br><br>\n                        Hier finden Sie weitere Informationen zum PAYONE Payment-Modul f&uuml;r OXID eShop: \n                        <a href=\"https://docs.payone.com/display/public/INT/Oxid+6+Extension\" style=\"color:darkblue;text-decoration: underline;\" title=\"PAYONE Homepage\" target=\"_blank\">\n                            https://www.payone.com\n                        </a>"
-    lang: ''
-    thumbnail: picture.gif
-    author: 'FATCHIP GmbH'
-    url: 'https://wiki.fatchip.de/public/faqpayone'
-    email: kontakt@fatchip.de
-    classesWithoutNamespace:
-      fcpayone_adminview: fc/fcpayone/application/controllers/admin/fcpayone_adminview.php
-      fcpayone_admindetails: fc/fcpayone/application/controllers/admin/fcpayone_admindetails.php
-      fcpayone_adminlist: fc/fcpayone/application/controllers/admin/fcpayone_adminlist.php
-      fcpayone_main_ajax: fc/fcpayone/application/controllers/admin/fcPayOne_Main_Ajax.php
-      fcpayone_admin: fc/fcpayone/application/controllers/admin/fcpayone_admin.php
-      fcpayone_apilog: fc/fcpayone/application/controllers/admin/fcpayone_apilog.php
-      fcpayone_apilog_list: fc/fcpayone/application/controllers/admin/fcpayone_apilog_list.php
-      fcpayone_apilog_main: fc/fcpayone/application/controllers/admin/fcpayone_apilog_main.php
-      fcpayone_list: fc/fcpayone/application/controllers/admin/fcpayone_list.php
-      fcpayone_log: fc/fcpayone/application/controllers/admin/fcpayone_log.php
-      fcpayone_log_list: fc/fcpayone/application/controllers/admin/fcpayone_log_list.php
-      fcpayone_main: fc/fcpayone/application/controllers/admin/fcpayone_main.php
-      fcpayone_order: fc/fcpayone/application/controllers/admin/fcpayone_order.php
-      fcpayone_protocol: fc/fcpayone/application/controllers/admin/fcpayone_protocol.php
-      fcpayone_status_forwarding: fc/fcpayone/application/controllers/admin/fcpayone_status_forwarding.php
-      fcpayone_status_mapping: fc/fcpayone/application/controllers/admin/fcpayone_status_mapping.php
-      fcpayone_error_mapping: fc/fcpayone/application/controllers/admin/fcpayone_error_mapping.php
-      fcpayoneiframe: fc/fcpayone/application/controllers/fcpayoneiframe.php
-      fcpouserflag: fc/fcpayone/application/models/fcpouserflag.php
-      fcporequestlog: fc/fcpayone/application/models/fcporequestlog.php
-      fcpotransactionstatus: fc/fcpayone/application/models/fcpotransactionstatus.php
-      fcpomapping: fc/fcpayone/application/models/fcpomapping.php
-      fcpoerrormapping: fc/fcpayone/application/models/fcpoerrormapping.php
-      fcpoforwarding: fc/fcpayone/application/models/fcpoforwarding.php
-      fcpoconfigexport: fc/fcpayone/application/models/fcpoconfigexport.php
-      fcpoklarna: fc/fcpayone/application/models/fcpoklarna.php
-      fcpopaypal: fc/fcpayone/application/models/fcpopaypal.php
-      fcpayone_ajax: fc/fcpayone/application/models/fcpayone_ajax.php
-      fcporatepay: fc/fcpayone/application/models/fcporatepay.php
-      fcpohelper: fc/fcpayone/lib/fcpohelper.php
-      fcporequest: fc/fcpayone/lib/fcporequest.php
-      fcpoparamsparser: fc/fcpayone/lib/fcpoparamsparser.php
-      fcpayone_events: fc/fcpayone/core/fcpayone_events.php
-    classExtensions:
-      OxidEsales\Eshop\Application\Controller\Admin\PaymentMain: fc/fcpayone/extend/application/controllers/admin/fcPayOnePaymentMain
-      OxidEsales\Eshop\Application\Controller\BasketController: fc/fcpayone/extend/application/controllers/fcPayOneBasketView
-      OxidEsales\Eshop\Application\Controller\UserController: fc/fcpayone/extend/application/controllers/fcPayOneUserView
-      OxidEsales\Eshop\Application\Controller\OrderController: fc/fcpayone/extend/application/controllers/fcPayOneOrderView
-      OxidEsales\Eshop\Application\Controller\PaymentController: fc/fcpayone/extend/application/controllers/fcPayOnePaymentView
-      OxidEsales\Eshop\Application\Controller\ThankYouController: fc/fcpayone/extend/application/controllers/fcPayOneThankyouView
-      OxidEsales\Eshop\Application\Model\Basket: fc/fcpayone/extend/application/models/fcPayOneBasket
-      OxidEsales\Eshop\Application\Model\BasketItem: fc/fcpayone/extend/application/models/fcPayOneBasketitem
-      OxidEsales\Eshop\Application\Model\Order: fc/fcpayone/extend/application/models/fcPayOneOrder
-      OxidEsales\Eshop\Application\Model\OrderArticle: fc/fcpayone/extend/application/models/fcPayOneOrderarticle
-      OxidEsales\Eshop\Application\Model\Payment: fc/fcpayone/extend/application/models/fcPayOnePayment
-      OxidEsales\Eshop\Application\Model\PaymentGateway: fc/fcpayone/extend/application/models/fcPayOnePaymentgateway
-      OxidEsales\Eshop\Application\Model\User: fc/fcpayone/extend/application/models/fcPayOneUser
-      OxidEsales\Eshop\Application\Model\Address: fc/fcpayone/extend/application/models/fcPayOneAddress
-      OxidEsales\Eshop\Core\ViewConfig: fc/fcpayone/extend/core/fcPayOneViewConf
-      OxidEsales\Eshop\Application\Controller\Admin\RolesBackendMain: fc/fcpayone/extend/application/controllers/admin/fcPayOneRolesBeMain
-    events:
-      onActivate: 'fcpayone_events::onActivate'
-      onDeactivate: 'fcpayone_events::onDeactivate'
-    templateBlocks:
-      -
-        template: layout/base.tpl
-        block: base_js
-        file: fcpo_base_js_extend
-      -
-        template: layout/base.tpl
-        block: base_style
-        file: fcpo_base_css_extend
-      -
-        template: page/checkout/basket.tpl
-        block: checkout_basket_main
-        file: fcpo_basket_override
-      -
-        template: widget/minibasket/minibasket.tpl
-        block: widget_minibasket_total
-        file: fcpo_minibasket_total_override
-      -
-        template: page/checkout/order.tpl
-        block: checkout_order_address
-        file: fcpo_order_override
-      -
-        template: page/checkout/order.tpl
-        block: shippingAndPayment
-        file: fcpo_order_order_shippingAndPayment_override
-      -
-        template: page/checkout/user.tpl
-        block: checkout_user_main
-        file: fcpo_user_override
-      -
-        template: _formparams.tpl
-        block: admin_formparams
-        file: fcpo_admin_formparams
-      -
-        template: page/checkout/payment.tpl
-        block: change_payment
-        file: fcpo_payment_override
-      -
-        template: page/checkout/payment.tpl
-        block: select_payment
-        file: fcpo_payment_select_override
-      -
-        template: page/checkout/order.tpl
-        block: order_basket
-        file: fcpo_order_basket_override
-      -
-        template: page/checkout/order.tpl
-        block: checkout_order_errors
-        file: fcpo_order_checkout_order_errors
-      -
-        template: page/checkout/thankyou.tpl
-        block: checkout_thankyou_proceed
-        file: fcpo_thankyou_checkout_thankyou
-      -
-        template: email/html/order_cust.tpl
-        block: email_html_order_cust_paymentinfo
-        file: fcpo_email_html_order_cust_paymentinfo
-      -
-        template: email/plain/order_cust.tpl
-        block: email_plain_order_cust_paymentinfo
-        file: fcpo_email_plain_order_cust_paymentinfo
-      -
-        template: order_list.tpl
-        block: admin_order_list_colgroup
-        file: fcpo_admin_order_list_colgroup
-      -
-        template: order_list.tpl
-        block: admin_order_list_filter
-        file: fcpo_admin_order_list_filter
-      -
-        template: order_list.tpl
-        block: admin_order_list_sorting
-        file: fcpo_admin_order_list_sorting
-      -
-        template: order_list.tpl
-        block: admin_order_list_item
-        file: fcpo_admin_order_list_item
-      -
-        template: payment_list.tpl
-        block: admin_payment_list_filter
-        file: fcpo_admin_payment_list_filter
-      -
-        template: payment_main.tpl
-        block: admin_payment_main_form
-        file: fcpo_admin_payment_main_form
-      -
-        template: page/checkout/basket.tpl
-        block: basket_btn_next_top
-        file: fcpo_basket_btn_next
-      -
-        template: page/checkout/basket.tpl
-        block: basket_btn_next_bottom
-        file: fcpo_basket_btn_next_bottom
-      -
-        template: page/checkout/payment.tpl
-        block: checkout_payment_errors
-        file: fcpo_payment_errors
-      -
-        template: page/checkout/basket.tpl
-        block: checkout_basket_main
-        file: fcpo_basket_errors
-      -
-        template: roles_bemain.tpl
-        block: admin_roles_bemain_form
-        file: fcpo_admin_roles_bemain_form
-    templates:
-      fcpayoneiframe.tpl: fc/fcpayone/application/views/frontend/tpl/fcpayoneiframe.tpl
-      fcpayone_popup_main.tpl: fc/fcpayone/application/views/admin/tpl/popups/fcpayone_popup_main.tpl
-      fcpayone.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone.tpl
-      fcpayone_apilog.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog.tpl
-      fcpayone_apilog_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog_list.tpl
-      fcpayone_apilog_main.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog_main.tpl
-      fcpayone_cc_preview.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_cc_preview.tpl
-      fcpayone_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_list.tpl
-      fcpayone_log.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_log.tpl
-      fcpayone_log_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_log_list.tpl
-      fcpayone_main.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_main.tpl
-      fcpayone_order.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_order.tpl
-      fcpayone_protocol.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_protocol.tpl
-      fcpayone_status_forwarding.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_status_forwarding.tpl
-      fcpayone_status_mapping.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_status_mapping.tpl
-      fcpayone_error_mapping.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_error_mapping.tpl
   oepaypal:
     id: oepaypal
     path: oe/oepaypal
@@ -1257,255 +454,610 @@ modules:
       order_paypal.tpl: oe/oepaypal/views/admin/tpl/order_paypal.tpl
       ipnhandler.tpl: oe/oepaypal/views/tpl/ipnhandler.tpl
       installment_banners.tpl: oe/oepaypal/views/tpl/installment_banners.tpl
-  ddoevisualcms:
-    id: ddoevisualcms
-    path: ddoe/visualcms
-    version: 3.7.0
+  fcpayone:
+    id: fcpayone
+    path: fc/fcpayone
+    version: 1.9.0
     configured: false
     title:
-      en: 'Visual CMS'
+      en: 'PAYONE Payment f&uuml;r OXID eShop'
     description:
-      de: "<span>Einfache Verwaltung von CMS-Inhalten per Drag & Drop.</span>\n                 <br>\n                 <ul>\n                    <li>Viele M&ouml;glichkeiten durch Verwendung von Widgets</li>\n                    <li>Kinderleicht per Drag & Drop bedienbar</li>\n                    <li>Schnelleres Arbeiten = gro&szlig;e Zeitersparnis</li>\n                    <li>Flow Ready / RoxIVE Ready</li>\n                    <li>CMS-Seiten Livesuche</li>\n                    <li>Responsive Gridsystem</li>\n                 </ul>\n                 <dl class=\"moduleDesc clear\">\n                    <dt>Doku</dt>\n                    <dd><a href=\"https://docs.oxid-esales.com/modules/vcms/de/latest/\" target=\"_blank\">Benutzerhandbuch Modul Visual CMS</a></dd>\n                </dl>\n                 "
-      en: "<span>Easy management of CMS content via drag and drop.</span>\n                 <br>\n                 <ul>\n                    <li>Many scenarios possible through usage of widgets</li>\n                    <li>Drag & Drop</li>\n                    <li>Fast Results</li>\n                    <li>Flow Ready / RoxIVE Ready</li>\n                    <li>Live search of CMS pages</li>\n                    <li>Responsive grid system</li>\n                 </ul>\n                 <dl class=\"moduleDesc clear\">\n                    <dt>DOK</dt>\n                    <dd><a href=\"https://docs.oxid-esales.com/modules/vcms/en/latest/\" target=\"_blank\">Visual CMS Module User Manual</a></dd>\n                </dl>\n                 "
+      en: "Sie suchen nach der optimalen Payment-L&ouml;sung f&uuml;r Ihren Online-Shop?<br><br>\n                        PAYONE bietet Unternehmensl&ouml;sungen zur automatisierten und ganzheitlichen Abwicklung aller Zahlungsprozesse im E-Commerce. \n                        Der Payment Service Provider ist ein Unternehmen der Sparkassen-Finanzgruppe und von der Bundesanstalt f&uuml;r Finanzdienstleistungsaufsicht als Zahlungsinstitut zugelassen. \n                        Das Leistungsspektrum umfasst die Akzeptanz und Abwicklung nationaler und internationaler Zahlungsarten sowie alle Zahlungsdienstleistungen. \n                        Standardisierte Schnittstellen und Extensions erlauben eine einfache Integration in bestehende E-Commerce und IT-Systeme bei h&ouml;chsten Sicherheitsstandards.<br><br>\n                        Hier finden Sie weitere Informationen zum PAYONE Payment-Modul f&uuml;r OXID eShop: \n                        <a href=\"https://docs.payone.com/display/public/INT/Oxid+6+Extension\" style=\"color:darkblue;text-decoration: underline;\" title=\"PAYONE Homepage\" target=\"_blank\">\n                            https://www.payone.com\n                        </a>"
+    lang: ''
+    thumbnail: picture.gif
+    author: 'FATCHIP GmbH'
+    url: 'https://wiki.fatchip.de/public/faqpayone'
+    email: kontakt@fatchip.de
+    classesWithoutNamespace:
+      fcpayone_adminview: fc/fcpayone/application/controllers/admin/fcpayone_adminview.php
+      fcpayone_admindetails: fc/fcpayone/application/controllers/admin/fcpayone_admindetails.php
+      fcpayone_adminlist: fc/fcpayone/application/controllers/admin/fcpayone_adminlist.php
+      fcpayone_main_ajax: fc/fcpayone/application/controllers/admin/fcPayOne_Main_Ajax.php
+      fcpayone_admin: fc/fcpayone/application/controllers/admin/fcpayone_admin.php
+      fcpayone_apilog: fc/fcpayone/application/controllers/admin/fcpayone_apilog.php
+      fcpayone_apilog_list: fc/fcpayone/application/controllers/admin/fcpayone_apilog_list.php
+      fcpayone_apilog_main: fc/fcpayone/application/controllers/admin/fcpayone_apilog_main.php
+      fcpayone_list: fc/fcpayone/application/controllers/admin/fcpayone_list.php
+      fcpayone_log: fc/fcpayone/application/controllers/admin/fcpayone_log.php
+      fcpayone_log_list: fc/fcpayone/application/controllers/admin/fcpayone_log_list.php
+      fcpayone_main: fc/fcpayone/application/controllers/admin/fcpayone_main.php
+      fcpayone_order: fc/fcpayone/application/controllers/admin/fcpayone_order.php
+      fcpayone_protocol: fc/fcpayone/application/controllers/admin/fcpayone_protocol.php
+      fcpayone_status_forwarding: fc/fcpayone/application/controllers/admin/fcpayone_status_forwarding.php
+      fcpayone_status_mapping: fc/fcpayone/application/controllers/admin/fcpayone_status_mapping.php
+      fcpayone_error_mapping: fc/fcpayone/application/controllers/admin/fcpayone_error_mapping.php
+      fcpayoneiframe: fc/fcpayone/application/controllers/fcpayoneiframe.php
+      fcpouserflag: fc/fcpayone/application/models/fcpouserflag.php
+      fcporequestlog: fc/fcpayone/application/models/fcporequestlog.php
+      fcpotransactionstatus: fc/fcpayone/application/models/fcpotransactionstatus.php
+      fcpomapping: fc/fcpayone/application/models/fcpomapping.php
+      fcpoerrormapping: fc/fcpayone/application/models/fcpoerrormapping.php
+      fcpoforwarding: fc/fcpayone/application/models/fcpoforwarding.php
+      fcpoconfigexport: fc/fcpayone/application/models/fcpoconfigexport.php
+      fcpoklarna: fc/fcpayone/application/models/fcpoklarna.php
+      fcpopaypal: fc/fcpayone/application/models/fcpopaypal.php
+      fcpayone_ajax: fc/fcpayone/application/models/fcpayone_ajax.php
+      fcporatepay: fc/fcpayone/application/models/fcporatepay.php
+      fcpohelper: fc/fcpayone/lib/fcpohelper.php
+      fcporequest: fc/fcpayone/lib/fcporequest.php
+      fcpoparamsparser: fc/fcpayone/lib/fcpoparamsparser.php
+      fcpayone_events: fc/fcpayone/core/fcpayone_events.php
+    classExtensions:
+      OxidEsales\Eshop\Application\Controller\Admin\PaymentMain: fc/fcpayone/extend/application/controllers/admin/fcPayOnePaymentMain
+      OxidEsales\Eshop\Application\Controller\BasketController: fc/fcpayone/extend/application/controllers/fcPayOneBasketView
+      OxidEsales\Eshop\Application\Controller\UserController: fc/fcpayone/extend/application/controllers/fcPayOneUserView
+      OxidEsales\Eshop\Application\Controller\OrderController: fc/fcpayone/extend/application/controllers/fcPayOneOrderView
+      OxidEsales\Eshop\Application\Controller\PaymentController: fc/fcpayone/extend/application/controllers/fcPayOnePaymentView
+      OxidEsales\Eshop\Application\Controller\ThankYouController: fc/fcpayone/extend/application/controllers/fcPayOneThankyouView
+      OxidEsales\Eshop\Application\Model\Basket: fc/fcpayone/extend/application/models/fcPayOneBasket
+      OxidEsales\Eshop\Application\Model\BasketItem: fc/fcpayone/extend/application/models/fcPayOneBasketitem
+      OxidEsales\Eshop\Application\Model\Order: fc/fcpayone/extend/application/models/fcPayOneOrder
+      OxidEsales\Eshop\Application\Model\OrderArticle: fc/fcpayone/extend/application/models/fcPayOneOrderarticle
+      OxidEsales\Eshop\Application\Model\Payment: fc/fcpayone/extend/application/models/fcPayOnePayment
+      OxidEsales\Eshop\Application\Model\PaymentGateway: fc/fcpayone/extend/application/models/fcPayOnePaymentgateway
+      OxidEsales\Eshop\Application\Model\User: fc/fcpayone/extend/application/models/fcPayOneUser
+      OxidEsales\Eshop\Application\Model\Address: fc/fcpayone/extend/application/models/fcPayOneAddress
+      OxidEsales\Eshop\Core\ViewConfig: fc/fcpayone/extend/core/fcPayOneViewConf
+    events:
+      onActivate: 'fcpayone_events::onActivate'
+      onDeactivate: 'fcpayone_events::onDeactivate'
+    templateBlocks:
+      -
+        template: layout/base.tpl
+        block: base_js
+        file: fcpo_base_js_extend
+      -
+        template: layout/base.tpl
+        block: base_style
+        file: fcpo_base_css_extend
+      -
+        template: page/checkout/basket.tpl
+        block: checkout_basket_main
+        file: fcpo_basket_override
+      -
+        template: widget/minibasket/minibasket.tpl
+        block: widget_minibasket_total
+        file: fcpo_minibasket_total_override
+      -
+        template: page/checkout/order.tpl
+        block: checkout_order_address
+        file: fcpo_order_override
+      -
+        template: page/checkout/order.tpl
+        block: shippingAndPayment
+        file: fcpo_order_order_shippingAndPayment_override
+      -
+        template: page/checkout/user.tpl
+        block: checkout_user_main
+        file: fcpo_user_override
+      -
+        template: _formparams.tpl
+        block: admin_formparams
+        file: fcpo_admin_formparams
+      -
+        template: page/checkout/payment.tpl
+        block: change_payment
+        file: fcpo_payment_override
+      -
+        template: page/checkout/payment.tpl
+        block: select_payment
+        file: fcpo_payment_select_override
+      -
+        template: page/checkout/order.tpl
+        block: order_basket
+        file: fcpo_order_basket_override
+      -
+        template: page/checkout/order.tpl
+        block: checkout_order_errors
+        file: fcpo_order_checkout_order_errors
+      -
+        template: page/checkout/thankyou.tpl
+        block: checkout_thankyou_proceed
+        file: fcpo_thankyou_checkout_thankyou
+      -
+        template: email/html/order_cust.tpl
+        block: email_html_order_cust_paymentinfo
+        file: fcpo_email_html_order_cust_paymentinfo
+      -
+        template: email/plain/order_cust.tpl
+        block: email_plain_order_cust_paymentinfo
+        file: fcpo_email_plain_order_cust_paymentinfo
+      -
+        template: order_list.tpl
+        block: admin_order_list_colgroup
+        file: fcpo_admin_order_list_colgroup
+      -
+        template: order_list.tpl
+        block: admin_order_list_filter
+        file: fcpo_admin_order_list_filter
+      -
+        template: order_list.tpl
+        block: admin_order_list_sorting
+        file: fcpo_admin_order_list_sorting
+      -
+        template: order_list.tpl
+        block: admin_order_list_item
+        file: fcpo_admin_order_list_item
+      -
+        template: payment_list.tpl
+        block: admin_payment_list_filter
+        file: fcpo_admin_payment_list_filter
+      -
+        template: payment_main.tpl
+        block: admin_payment_main_form
+        file: fcpo_admin_payment_main_form
+      -
+        template: page/checkout/basket.tpl
+        block: basket_btn_next_top
+        file: fcpo_basket_btn_next
+      -
+        template: page/checkout/basket.tpl
+        block: basket_btn_next_bottom
+        file: fcpo_basket_btn_next_bottom
+      -
+        template: page/checkout/payment.tpl
+        block: checkout_payment_errors
+        file: fcpo_payment_errors
+      -
+        template: page/checkout/basket.tpl
+        block: checkout_basket_main
+        file: fcpo_basket_errors
+    templates:
+      fcpayoneiframe.tpl: fc/fcpayone/application/views/frontend/tpl/fcpayoneiframe.tpl
+      fcpayone_popup_main.tpl: fc/fcpayone/application/views/admin/tpl/popups/fcpayone_popup_main.tpl
+      fcpayone.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone.tpl
+      fcpayone_apilog.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog.tpl
+      fcpayone_apilog_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog_list.tpl
+      fcpayone_apilog_main.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_apilog_main.tpl
+      fcpayone_cc_preview.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_cc_preview.tpl
+      fcpayone_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_list.tpl
+      fcpayone_log.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_log.tpl
+      fcpayone_log_list.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_log_list.tpl
+      fcpayone_main.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_main.tpl
+      fcpayone_order.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_order.tpl
+      fcpayone_protocol.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_protocol.tpl
+      fcpayone_status_forwarding.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_status_forwarding.tpl
+      fcpayone_status_mapping.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_status_mapping.tpl
+      fcpayone_error_mapping.tpl: fc/fcpayone/application/views/admin/tpl/fcpayone_error_mapping.tpl
+  ddoewysiwyg:
+    id: ddoewysiwyg
+    path: ddoe/wysiwyg
+    version: 2.4.2
+    configured: false
+    title:
+      en: 'WYSIWYG Editor + Mediathek'
+    description:
+      de: ''
+      en: ''
     lang: ''
     thumbnail: logo.png
     author: 'OXID eSales AG & digidesk - media solutions'
     url: 'http://www.oxid-esales.com'
     email: info@oxid-esales.com
     classExtensions:
-      OxidEsales\Eshop\Core\ViewConfig: OxidEsales\VisualCmsModule\Core\ViewConfig
-      OxidEsales\Eshop\Core\Utils: OxidEsales\VisualCmsModule\Core\Utils
-      OxidEsales\Eshop\Core\UtilsView: OxidEsales\VisualCmsModule\Core\UtilsView
-      OxidEsales\Eshop\Core\Theme: OxidEsales\VisualCmsModule\Core\Theme
-      OxidEsales\Eshop\Core\Language: OxidEsales\VisualCmsModule\Core\Language
-      OxidEsales\Eshop\Application\Controller\ContentController: OxidEsales\VisualCmsModule\Application\Controller\ContentController
-      OxidEsales\Eshop\Application\Component\BasketComponent: OxidEsales\VisualCmsModule\Application\Component\BasketComponent
-      OxidEsales\Eshop\Application\Model\Content: OxidEsales\VisualCmsModule\Application\Model\Content
-      OxidEsales\Eshop\Application\Model\ContentList: OxidEsales\VisualCmsModule\Application\Model\ContentList
-      OxidEsales\Eshop\Application\Model\SeoEncoderContent: OxidEsales\VisualCmsModule\Application\Model\SeoEncoderContent
+      OxidEsales\Eshop\Application\Controller\TextEditorHandler: OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
+      OxidEsales\Eshop\Core\ViewConfig: OxidEsales\WysiwygModule\Core\ViewConfig
+      OxidEsales\Eshop\Core\Language: OxidEsales\WysiwygModule\Core\Language
+      OxidEsales\Eshop\Core\Utils: OxidEsales\WysiwygModule\Core\Utils
     controllers:
-      ddoevisualcmslangjs: OxidEsales\VisualCmsModule\Application\Controller\VisualCmsLangJs
-      ddoevisualcmsadmin: OxidEsales\VisualCmsModule\Application\Controller\Admin\VisualCmsAdmin
-      ddoevisualcmsmedia: OxidEsales\VisualCmsModule\Application\Controller\Admin\VisualCmsMedia
-      ddoevisualcmspreview: OxidEsales\VisualCmsModule\Application\Controller\PreviewController
-      ddoevisualcmscron: OxidEsales\VisualCmsModule\Application\Controller\CronController
+      ddoewysiwyglangjs: OxidEsales\WysiwygModule\Application\Controller\WysiwygLangJs
+      ddoewysiwygmedia_view: OxidEsales\WysiwygModule\Application\Controller\Admin\WysiwygMedia
+      ddoewysiwygmedia_wrapper: OxidEsales\WysiwygModule\Application\Controller\Admin\WysiwygMediaWrapper
     events:
-      onActivate: '\OxidEsales\VisualCmsModule\Core\Events::onActivate'
-      onDeactivate: '\OxidEsales\VisualCmsModule\Core\Events::onDeactivate'
-    moduleSettings:
-      blCustomGridFramework:
-        group: frontend
-        type: bool
-        value: false
-      sGridColPrefix:
-        group: frontend
-        type: str
-        value: col-sm-
-      sGridOffsetPrefix:
-        group: frontend
-        type: str
-        value: col-sm-offset-
-      sGridRow:
-        group: frontend
-        type: str
-        value: row
-      blGridWordNumbers:
-        group: frontend
-        type: bool
-        value: false
-      iGridSize:
-        group: frontend
-        type: str
-        value: '12'
-      blEnableLazyLoading:
-        group: frontend
-        type: bool
-        value: false
-      blEnableFontAwesome:
-        group: frontend
-        type: bool
-        value: true
-      iGridsterSize:
-        group: backend
-        type: str
-        value: '6'
-      aPredefinedCssClasses:
-        group: backend
-        type: arr
-        value: {  }
-      iDefaultWidgetSize:
-        group: backend
-        type: str
-        value: '1'
-      blEnableVisualEditorBlocks:
-        group: backend
-        type: bool
-        value: false
-      blDisableJQuery:
-        group: other
-        type: bool
-        value: false
-      blDisableBootstrap:
-        group: other
-        type: bool
-        value: false
-      blVisualEditorDebug:
-        group: other
-        type: bool
-        value: false
-      sVisualEditorCronKey:
-        group: other
-        type: str
-        value: ''
-      ddoeVisualCmsAlternativeImageDirectory:
-        group: other
-        type: str
-        value: ''
+      onActivate: '\OxidEsales\WysiwygModule\Core\Events::onActivate'
+      onDeactivate: '\OxidEsales\WysiwygModule\Core\Events::onDeactivate'
+    templates:
+      ddoewysiwyg.tpl: ddoe/wysiwyg/Application/views/admin/tpl/ddoewysiwyg.tpl
+      dialog/ddoewysiwygmedia.tpl: ddoe/wysiwyg/Application/views/admin/tpl/dialog/ddoewysiwygmedia.tpl
+      dialog/ddoewysiwygmedia_wrapper.tpl: ddoe/wysiwyg/Application/views/admin/tpl/dialog/ddoewysiwygmedia_wrapper.tpl
+  tcklarna:
+    id: tcklarna
+    path: tc/tcklarna
+    version: 5.5.3
+    configured: false
+    title:
+      en: 'Klarna Checkout and Klarna Payments'
+    description:
+      de: 'Egal was Sie verkaufen, unsere Produkte sind dafür gemacht, Ihren Kunden das beste Erlebnis zu bereiten. Das gefällt nicht nur Ihnen, sondern auch uns! Die Klarna Plugins werden stets auf Herz und Nieren geprüft und können ganz einfach durch Sie oder Ihre technischen Ansprechpartner aktiviert werden. Das nennen wir smoooth. Hier können Sie sowohl Klarna Payments aktivieren und anschließend genau die Zahlarten auswählen, die Sie wünschen oder mit der Komplettlösung, dem Klarna Checkout, Ihre Customer Journey optimieren. Erfahren Sie hier mehr zu Klarna für OXID: <a href="https://www.klarna.com/de/verkaeufer/oxid/">https://www.klarna.com/de/verkaeufer/oxid/</a> Und so einfach ist die Integration: <a href="https://hello.klarna.com/rs/778-XGY-327/images/How_to_OXID.mp4" target="_blank">Zum Video</a>'
+      en: 'No matter what you sell, our products are made to give your customers the best purchase experience. This is not only smoooth for you - it is smoooth for us, too! Klarna plugins are always tested and can be activated by you or your technical contact with just a few clicks. That is smoooth. Here you can activate Klarna Payments and then select exactly the payment methods you want or optimize your customer journey with the complete Klarna Checkout solution. Find out more about Klarna for OXID: <a href="https://www.klarna.com/de/verkaeufer/oxid/" target="_blank">https://www.klarna.com/de/verkaeufer/oxid/</a> Integrating Klarna at OXID is easy as pie: <a href="https://hello.klarna.com/rs/778-XGY-327/images/How_to_OXID.mp4" target="_blank">to the video (click)</a>'
+    lang: ''
+    thumbnail: /out/admin/src/img/klarna_lockup_black.jpg
+    author: '<a href="https://www.fatchip.de" target="_blank">FATCHIP GmbH</a>'
+    url: 'https://www.klarna.com/de/verkaeufer/plattformen-und-partner/oxid/'
+    email: oxid@klarna.com
+    classExtensions:
+      OxidEsales\Eshop\Application\Model\Basket: TopConcepts\Klarna\Model\KlarnaBasket
+      OxidEsales\Eshop\Application\Model\User: TopConcepts\Klarna\Model\KlarnaUser
+      OxidEsales\Eshop\Application\Model\Article: TopConcepts\Klarna\Model\KlarnaArticle
+      OxidEsales\Eshop\Application\Model\Order: TopConcepts\Klarna\Model\KlarnaOrder
+      OxidEsales\Eshop\Application\Model\Address: TopConcepts\Klarna\Model\KlarnaAddress
+      OxidEsales\Eshop\Application\Model\Payment: TopConcepts\Klarna\Model\KlarnaPayment
+      OxidEsales\Eshop\Application\Model\CountryList: TopConcepts\Klarna\Model\KlarnaCountryList
+      OxidEsales\Eshop\Application\Model\OrderArticle: TopConcepts\Klarna\Model\KlarnaOrderArticle
+      OxidEsales\Eshop\Application\Model\UserPayment: TopConcepts\Klarna\Model\KlarnaUserPayment
+      OxidEsales\Eshop\Application\Controller\ThankYouController: TopConcepts\Klarna\Controller\KlarnaThankYouController
+      OxidEsales\Eshop\Core\ViewConfig: TopConcepts\Klarna\Controller\KlarnaViewConfig
+      OxidEsales\Eshop\Application\Controller\OrderController: TopConcepts\Klarna\Controller\KlarnaOrderController
+      OxidEsales\Eshop\Application\Controller\UserController: TopConcepts\Klarna\Controller\KlarnaUserController
+      OxidEsales\Eshop\Application\Controller\PaymentController: TopConcepts\Klarna\Controller\KlarnaPaymentController
+      OxidEsales\Eshop\Application\Controller\BasketController: TopConcepts\Klarna\Controller\KlarnaBasketController
+      OxidEsales\Eshop\Application\Controller\Admin\OrderAddress: TopConcepts\Klarna\Controller\Admin\KlarnaOrderAddress
+      OxidEsales\Eshop\Application\Controller\Admin\OrderList: TopConcepts\Klarna\Controller\Admin\KlarnaOrderList
+      OxidEsales\Eshop\Application\Controller\Admin\OrderArticle: TopConcepts\Klarna\Controller\Admin\KlarnaOrderArticle
+      OxidEsales\Eshop\Application\Controller\Admin\OrderMain: TopConcepts\Klarna\Controller\Admin\KlarnaOrderMain
+      OxidEsales\Eshop\Application\Controller\Admin\OrderOverview: TopConcepts\Klarna\Controller\Admin\KlarnaOrderOverview
+      OxidEsales\Eshop\Application\Controller\Admin\PaymentMain: TopConcepts\Klarna\Controller\Admin\KlarnaPaymentMain
+      OxidEsales\Eshop\Application\Component\BasketComponent: TopConcepts\Klarna\Component\KlarnaBasketComponent
+      OxidEsales\Eshop\Application\Component\UserComponent: TopConcepts\Klarna\Component\KlarnaUserComponent
+      OxidEsales\Eshop\Application\Component\Widget\ServiceMenu: TopConcepts\Klarna\Component\Widgets\KlarnaServiceMenu
+      OxidEsales\Eshop\Core\Config: TopConcepts\Klarna\Core\Config
+      OxidEsales\Eshop\Application\Model\PaymentGateway: TopConcepts\Klarna\Model\PaymentGateway
+      OxidEsales\Eshop\Core\ShopControl: TopConcepts\Klarna\Core\KlarnaShopControl
+    controllers:
+      KlarnaStart: TopConcepts\Klarna\Controller\Admin\KlarnaStart
+      KlarnaGeneral: TopConcepts\Klarna\Controller\Admin\KlarnaGeneral
+      KlarnaConfiguration: TopConcepts\Klarna\Controller\Admin\KlarnaConfiguration
+      KlarnaDesign: TopConcepts\Klarna\Controller\Admin\KlarnaDesign
+      KlarnaExternalPayments: TopConcepts\Klarna\Controller\Admin\KlarnaExternalPayments
+      KlarnaEmdAdmin: TopConcepts\Klarna\Controller\Admin\KlarnaEmdAdmin
+      KlarnaOrders: TopConcepts\Klarna\Controller\Admin\KlarnaOrders
+      KlarnaMessaging: TopConcepts\Klarna\Controller\Admin\KlarnaMessaging
+      KlarnaShipping: TopConcepts\Klarna\Controller\Admin\KlarnaShipping
+      KlarnaExpress: TopConcepts\Klarna\Controller\KlarnaExpressController
+      KlarnaAjax: TopConcepts\Klarna\Controller\KlarnaAjaxController
+      KlarnaEpmDispatcher: TopConcepts\Klarna\Controller\KlarnaEpmDispatcher
+      KlarnaAcknowledge: TopConcepts\Klarna\Controller\KlarnaAcknowledgeController
+      KlarnaValidate: TopConcepts\Klarna\Controller\KlarnaValidationController
+    events:
+      onActivate: '\TopConcepts\Klarna\Core\KlarnaInstaller::onActivate'
+      onDeactivate: '\TopConcepts\Klarna\Core\KlarnaInstaller::onDeactivate'
     templateBlocks:
       -
-        template: layout/base.tpl
-        block: base_style
-        file: /Application/views/blocks/base_style.tpl
+        template: widget/minibasket/minibasket.tpl
+        block: widget_minibasket
+        file: views/blocks/minibasket_widget_minibasket.tpl
       -
-        template: layout/base.tpl
-        block: base_js
-        file: /Application/views/blocks/base_js.tpl
+        template: page/shop/start.tpl
+        block: start_manufacturer_slider
+        file: views/blocks/start_widget_manufacturer.tpl
       -
-        template: widget/header/categorylist.tpl
-        block: dd_widget_header_categorylist_navbar_list
-        file: /Application/views/blocks/dd_widget_header_categorylist_navbar_list.tpl
-        theme: flow
+        template: layout/header.tpl
+        block: header_main
+        file: views/blocks/header_main.tpl
       -
-        template: widget/header/categorylist.tpl
-        block: dd_widget_header_categorylist_navbar_list
-        file: /Application/views/blocks/dd_widget_header_categorylist_navbar_list_wave.tpl
-        theme: wave
+        template: page/details/inc/productmain.tpl
+        block: details_productmain_variantselections
+        file: views/blocks/productmain_variantselection.tpl
+      -
+        template: layout/footer.tpl
+        block: footer_main
+        file: views/blocks/footer_footer_main.tpl
+      -
+        template: page/checkout/payment.tpl
+        block: select_payment
+        file: views/blocks/payment_select_payment.tpl
+      -
+        template: page/checkout/basket.tpl
+        block: checkout_basket_next_step_top
+        file: views/blocks/basket_checkout_basket_next_step_top.tpl
+      -
+        template: page/checkout/inc/basketcontents.tpl
+        block: checkout_basketcontents_summary
+        file: views/blocks/checkout_basketcontents_summary.tpl
+      -
+        template: page/checkout/payment.tpl
+        block: change_payment
+        file: views/blocks/payment_change_payment.tpl
+      -
+        template: page/checkout/order.tpl
+        block: order_basket
+        file: views/blocks/order_order_basket.tpl
+      -
+        template: page/checkout/order.tpl
+        block: shippingAndPayment
+        file: views/blocks/order_shippingAndPayment.tpl
+      -
+        template: page/checkout/order.tpl
+        block: checkout_order_next_step_bottom
+        file: views/blocks/order_checkout_order_next_step_bottom.tpl
+      -
+        template: page/details/inc/productmain.tpl
+        block: details_productmain_tobasket
+        file: views/blocks/productmain_details_productmain_tobasket.tpl
+      -
+        template: page/checkout/thankyou.tpl
+        block: checkout_thankyou_info
+        file: views/blocks/thankyou_checkout_thankyou_info.tpl
+      -
+        template: page/checkout/inc/steps.tpl
+        block: checkout_steps_main
+        file: views/blocks/steps_checkout_steps_main.tpl
+      -
+        template: form/fieldset/user_billing.tpl
+        block: form_user_billing_country
+        file: views/blocks/user_billing_form_user_billing_country.tpl
+      -
+        template: layout/footer.tpl
+        block: footer_main
+        file: views/blocks/tcklarna_law_notice.tpl
+      -
+        template: order_main.tpl
+        block: admin_order_main_form
+        file: views/blocks/admin/order_main_admin_order_main_form.tpl
+      -
+        template: email/html/order_cust.tpl
+        block: email_html_order_cust_paymentinfo_top
+        file: views/blocks/order_cust_email_html_order_cust_paymentinfo_top.tpl
+      -
+        template: form/fieldset/user_shipping.tpl
+        block: form_user_shipping_country
+        file: views/blocks/user_shipping_form_user_shipping_country.tpl
+      -
+        template: order_overview.tpl
+        block: admin_order_overview_billingaddress
+        file: views/blocks/admin/order_overview_admin_order_overview_billingaddress.tpl
+      -
+        template: order_article.tpl
+        block: admin_order_article_header
+        file: views/blocks/admin/order_article_admin_order_article_header.tpl
+      -
+        template: order_list.tpl
+        block: admin_order_list_filter
+        file: views/blocks/admin/order_list_admin_order_list_filter.tpl
+      -
+        template: payment_main.tpl
+        block: admin_payment_main_form
+        file: views/blocks/admin/payment_main_admin_payment_main_form.tpl
     templates:
-      ddoevisualcmsadmin.tpl: ddoe/visualcms/Application/views/admin/tpl/ddoevisualcmsadmin.tpl
-      ddoevisualcmsadmin_ui.tpl: ddoe/visualcms/Application/views/admin/tpl/ddoevisualcmsadmin_ui.tpl
-      dialog/ddoevisualcmsmedia.tpl: ddoe/visualcms/Application/views/admin/tpl/dialog/ddoevisualcmsmedia.tpl
-      ddoe_azure_content.tpl: ddoe/visualcms/Application/views/azure/tpl/ddoe_azure_content.tpl
-      ddoe_azure_content_plain.tpl: ddoe/visualcms/Application/views/azure/tpl/ddoe_azure_content_plain.tpl
-      ddoe_roxive_content.tpl: ddoe/visualcms/Application/views/roxive/tpl/ddoe_roxive_content.tpl
-      ddoe_roxive_content_plain.tpl: ddoe/visualcms/Application/views/roxive/tpl/ddoe_roxive_content_plain.tpl
-      ddoevisualcms_photoswipe.tpl: ddoe/visualcms/Application/views/tpl/ddoevisualcms_photoswipe.tpl
-      ddoe_widget_article.tpl: ddoe/visualcms/Application/views/tpl/ddoe_widget_article.tpl
+      tcklarna_checkout.tpl: tc/tcklarna/views/tpl/checkout/tcklarna_checkout.tpl
+      tcklarna_amazon_login.tpl: tc/tcklarna/views/tpl/checkout/tcklarna_amazon_login.tpl
+      tcklarna_checkout_voucher_data.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_data.tpl
+      tcklarna_checkout_voucher_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_box.tpl
+      tcklarna_checkout_voucher_errors.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_voucher_errors.tpl
+      tcklarna_json.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_json.tpl
+      tcklarna_country_select_popup.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_country_select_popup.tpl
+      tcklarna_checkout_login_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_login_box.tpl
+      tcklarna_checkout_address_box.tpl: tc/tcklarna/views/tpl/checkout/inc/tcklarna_checkout_address_box.tpl
+      tcklarna_general.tpl: tc/tcklarna/views/admin/tpl/tcklarna_general.tpl
+      tcklarna_design.tpl: tc/tcklarna/views/admin/tpl/tcklarna_design.tpl
+      tcklarna_kco_config.tpl: tc/tcklarna/views/admin/tpl/tcklarna_kco_config.tpl
+      tcklarna_kp_config.tpl: tc/tcklarna/views/admin/tpl/tcklarna_kp_config.tpl
+      tcklarna_start.tpl: tc/tcklarna/views/admin/tpl/tcklarna_start.tpl
+      tcklarna_external_payments.tpl: tc/tcklarna/views/admin/tpl/tcklarna_external_payments.tpl
+      tcklarna_emd_admin.tpl: tc/tcklarna/views/admin/tpl/tcklarna_emd_admin.tpl
+      tcklarna_orders.tpl: tc/tcklarna/views/admin/tpl/tcklarna_orders.tpl
+      tcklarna_messaging.tpl: tc/tcklarna/views/admin/tpl/tcklarna_messaging.tpl
+      tcklarna_shipping.tpl: tc/tcklarna/views/admin/tpl/tcklarna_shipping.tpl
+      tcklarna_country_creds.tpl: tc/tcklarna/views/admin/tpl/tcklarna_country_creds.tpl
+      tcklarna_header.tpl: tc/tcklarna/views/admin/tpl/tcklarna_header.tpl
+      tcklarna_lang_spec_conf.tpl: tc/tcklarna/views/admin/tpl/tcklarna_lang_spec_conf.tpl
+  makaira_oxid-connect-essential:
+    id: makaira_oxid-connect-essential
+    path: makaira/oxid-connect-essential
+    version: 1.4.5
+    configured: false
+    title:
+      en: 'Makaira Connect Essential'
+    description:
+      en: 'This module provides required endpoints to import product data into Makaira.'
+    lang: ''
+    thumbnail: makaira.jpg
+    author: 'Makaira GmbH'
+    url: 'https://www.makaira.io/'
+    email: support@makaira.io
+    classExtensions:
+      OxidEsales\Eshop\Core\Output: Makaira\OxidConnectEssential\Oxid\Core\MakairaConnectOutput
+      OxidEsales\Eshop\Application\Controller\Admin\ArticleAttributeAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleAttributeAjax
+      OxidEsales\Eshop\Application\Controller\Admin\ArticleCrosssellingAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleCrossSellingAjax
+      OxidEsales\Eshop\Application\Controller\Admin\ArticleExtendAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleExtendAjax
+      OxidEsales\Eshop\Application\Controller\Admin\ArticleSelectionAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleSelectionAjax
+      OxidEsales\Eshop\Application\Controller\Admin\AttributeMainAjax: Makaira\OxidConnectEssential\Controller\Admin\AttributeMainAjax
+      OxidEsales\Eshop\Application\Controller\Admin\CategoryOrderAjax: Makaira\OxidConnectEssential\Controller\Admin\CategoryOrderAjax
+      OxidEsales\Eshop\Application\Controller\Admin\ManufacturerMainAjax: Makaira\OxidConnectEssential\Controller\Admin\ManufacturerMainAjax
+      OxidEsales\Eshop\Application\Controller\Admin\SelectListMainAjax: Makaira\OxidConnectEssential\Controller\Admin\SelectListMainAjax
+    controllers:
+      MakairaReviewController: Makaira\OxidConnectEssential\Controller\ReviewController
+      MakairaUserController: Makaira\OxidConnectEssential\Controller\UserController
+      MakairaCartController: Makaira\OxidConnectEssential\Controller\CartController
+      makaira_connect_endpoint: Makaira\OxidConnectEssential\Controller\Endpoint
+    events:
+      onActivate: 'Makaira\OxidConnectEssential\Core\ModuleEvents::onActivate'
+    moduleSettings:
+      makaira_connect_secret:
+        group: SETTINGS
+        type: str
+        value: null
+      makaira_connect_category_inheritance:
+        group: SETTINGS
+        type: bool
+        value: false
+      makaira_field_blacklist_product:
+        group: IMPORTFIELDSANDATTS
+        type: arr
+        value:
+          - OXAMITEMID
+          - OXAMTASKID
+          - OXBUNDLEID
+          - OXEXTURL
+          - OXFOLDER
+          - OXNOSTOCKTEXT
+          - OXPIC8
+          - OXPIC9
+          - OXPIC10
+          - OXPIC11
+          - OXPIC12
+          - OXQUESTIONEMAIL
+          - OXREMINDACTIVE
+          - OXREMINDAMOUNT
+          - OXSHOWCUSTOMAGREEMENT
+          - OXSKIPDISCOUNTS
+          - OXSTOCKTEXT
+          - OXSUBCLASS
+          - OXTEMPLATE
+          - OXUPDATEPRICE
+          - OXUPDATEPRICEA
+          - OXUPDATEPRICEB
+          - OXUPDATEPRICEC
+          - OXUPDATEPRICETIME
+          - OXURLDESC
+          - OXURLIMG
+          - OXPIXIEXPORT
+          - OXPIXIEXPORTED
+          - OXORDERINFO
+          - OXVPE
+      makaira_field_blacklist_category:
+        group: IMPORTFIELDSANDATTS
+        type: arr
+        value:
+          - OXVAT
+          - OXSKIPDISCOUNTS
+      makaira_field_blacklist_manufacturer:
+        group: IMPORTFIELDSANDATTS
+        type: arr
+        value: {  }
+      makaira_attribute_as_int:
+        group: IMPORTFIELDSANDATTS
+        type: arr
+        value: {  }
+      makaira_attribute_as_float:
+        group: IMPORTFIELDSANDATTS
+        type: arr
+        value: {  }
+      makaira_tracking_page_id:
+        group: TRACKING_PRIVACY
+        type: str
+        value: ''
 moduleChains:
   classExtensions:
-    OxidEsales\Eshop\Application\Controller\TextEditorHandler:
-      - OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
+    OxidEsales\Eshop\Core\ViewHelper\JavaScriptRenderer:
+      - OxidProfessionalServices\Usercentrics\Core\ScriptRenderer
     OxidEsales\Eshop\Core\ViewConfig:
+      - OxidProfessionalServices\Usercentrics\Core\ViewConfig
+      - OxidEsales\PayPalModule\Core\ViewConfig
+      - fc/fcpayone/extend/core/fcPayOneViewConf
       - OxidEsales\WysiwygModule\Core\ViewConfig
       - TopConcepts\Klarna\Controller\KlarnaViewConfig
-      - OxidProfessionalServices\Usercentrics\Core\ViewConfig
-      - OxidSolutionCatalysts\Unzer\Core\ViewConfig
-      - fc/fcpayone/extend/core/fcPayOneViewConf
-      - OxidEsales\PayPalModule\Core\ViewConfig
-      - OxidEsales\VisualCmsModule\Core\ViewConfig
-    OxidEsales\Eshop\Core\Language:
-      - OxidEsales\WysiwygModule\Core\Language
-      - OxidEsales\VisualCmsModule\Core\Language
-    OxidEsales\Eshop\Core\Utils:
-      - OxidEsales\WysiwygModule\Core\Utils
-      - OxidEsales\VisualCmsModule\Core\Utils
-    OxidEsales\Eshop\Application\Model\Basket:
-      - TopConcepts\Klarna\Model\KlarnaBasket
-      - fc/fcpayone/extend/application/models/fcPayOneBasket
-      - OxidEsales\PayPalModule\Model\Basket
-    OxidEsales\Eshop\Application\Model\User:
-      - TopConcepts\Klarna\Model\KlarnaUser
-      - fc/fcpayone/extend/application/models/fcPayOneUser
-      - OxidEsales\PayPalModule\Model\User
-    OxidEsales\Eshop\Application\Model\Article:
-      - TopConcepts\Klarna\Model\KlarnaArticle
-      - OxidSolutionCatalysts\Unzer\Model\Article
-      - OxidEsales\PayPalModule\Model\Article
-    OxidEsales\Eshop\Application\Model\Order:
-      - TopConcepts\Klarna\Model\KlarnaOrder
-      - OxidSolutionCatalysts\Unzer\Model\Order
-      - fc/fcpayone/extend/application/models/fcPayOneOrder
-      - OxidEsales\PayPalModule\Model\Order
-    OxidEsales\Eshop\Application\Model\Address:
-      - TopConcepts\Klarna\Model\KlarnaAddress
-      - fc/fcpayone/extend/application/models/fcPayOneAddress
-      - OxidEsales\PayPalModule\Model\Address
-    OxidEsales\Eshop\Application\Model\Payment:
-      - TopConcepts\Klarna\Model\KlarnaPayment
-      - OxidSolutionCatalysts\Unzer\Model\Payment
-      - fc/fcpayone/extend/application/models/fcPayOnePayment
-    OxidEsales\Eshop\Application\Model\CountryList:
-      - TopConcepts\Klarna\Model\KlarnaCountryList
-    OxidEsales\Eshop\Application\Model\OrderArticle:
-      - TopConcepts\Klarna\Model\KlarnaOrderArticle
-      - fc/fcpayone/extend/application/models/fcPayOneOrderarticle
-    OxidEsales\Eshop\Application\Model\UserPayment:
-      - TopConcepts\Klarna\Model\KlarnaUserPayment
-    OxidEsales\Eshop\Application\Controller\ThankYouController:
-      - TopConcepts\Klarna\Controller\KlarnaThankYouController
-      - OxidSolutionCatalysts\Unzer\Controller\ThankYouController
-      - fc/fcpayone/extend/application/controllers/fcPayOneThankyouView
-    OxidEsales\Eshop\Application\Controller\OrderController:
-      - TopConcepts\Klarna\Controller\KlarnaOrderController
-      - OxidSolutionCatalysts\Unzer\Controller\OrderController
-      - fc/fcpayone/extend/application/controllers/fcPayOneOrderView
-      - OxidEsales\PayPalModule\Controller\OrderController
-    OxidEsales\Eshop\Application\Controller\UserController:
-      - TopConcepts\Klarna\Controller\KlarnaUserController
-      - fc/fcpayone/extend/application/controllers/fcPayOneUserView
-    OxidEsales\Eshop\Application\Controller\PaymentController:
-      - TopConcepts\Klarna\Controller\KlarnaPaymentController
-      - OxidSolutionCatalysts\Unzer\Controller\PaymentController
-      - fc/fcpayone/extend/application/controllers/fcPayOnePaymentView
-      - OxidEsales\PayPalModule\Controller\PaymentController
-    OxidEsales\Eshop\Application\Controller\BasketController:
-      - TopConcepts\Klarna\Controller\KlarnaBasketController
-      - fc/fcpayone/extend/application/controllers/fcPayOneBasketView
-    OxidEsales\Eshop\Application\Controller\Admin\OrderAddress:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderAddress
-    OxidEsales\Eshop\Application\Controller\Admin\OrderList:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderList
-      - OxidSolutionCatalysts\Unzer\Controller\Admin\OrderList
-      - OxidEsales\PayPalModule\Controller\Admin\OrderList
-    OxidEsales\Eshop\Application\Controller\Admin\OrderArticle:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderArticle
-    OxidEsales\Eshop\Application\Controller\Admin\OrderMain:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderMain
-      - OxidSolutionCatalysts\Unzer\Controller\Admin\OrderMain
-    OxidEsales\Eshop\Application\Controller\Admin\OrderOverview:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderOverview
-    OxidEsales\Eshop\Application\Controller\Admin\PaymentMain:
-      - TopConcepts\Klarna\Controller\Admin\KlarnaPaymentMain
-      - fc/fcpayone/extend/application/controllers/admin/fcPayOnePaymentMain
-    OxidEsales\Eshop\Application\Component\BasketComponent:
-      - TopConcepts\Klarna\Component\KlarnaBasketComponent
-      - OxidEsales\PayPalModule\Component\BasketComponent
-      - OxidEsales\VisualCmsModule\Application\Component\BasketComponent
-    OxidEsales\Eshop\Application\Component\UserComponent:
-      - TopConcepts\Klarna\Component\KlarnaUserComponent
-      - OxidEsales\GdprOptinModule\Component\UserComponent
-    OxidEsales\Eshop\Application\Component\Widget\ServiceMenu:
-      - TopConcepts\Klarna\Component\Widgets\KlarnaServiceMenu
-    OxidEsales\Eshop\Core\Config:
-      - TopConcepts\Klarna\Core\Config
-      - OxidSolutionCatalysts\Unzer\Core\Config
-    OxidEsales\Eshop\Application\Model\PaymentGateway:
-      - TopConcepts\Klarna\Model\PaymentGateway
-      - fc/fcpayone/extend/application/models/fcPayOnePaymentgateway
-      - OxidEsales\PayPalModule\Model\PaymentGateway
-    OxidEsales\Eshop\Core\ShopControl:
-      - TopConcepts\Klarna\Core\KlarnaShopControl
-      - OxidSolutionCatalysts\Unzer\Core\ShopControl
     OxidEsales\Eshop\Application\Component\Widget\ArticleDetails:
       - OxidEsales\GdprOptinModule\Component\Widget\ArticleDetails
       - OxidEsales\PayPalModule\Component\Widget\ArticleDetails
     OxidEsales\Eshop\Application\Component\Widget\Review:
       - OxidEsales\GdprOptinModule\Component\Widget\Review
+    OxidEsales\Eshop\Application\Component\UserComponent:
+      - OxidEsales\GdprOptinModule\Component\UserComponent
+      - TopConcepts\Klarna\Component\KlarnaUserComponent
     OxidEsales\Eshop\Application\Controller\ReviewController:
       - OxidEsales\GdprOptinModule\Controller\ReviewController
     OxidEsales\Eshop\Application\Controller\ArticleDetailsController:
       - OxidEsales\GdprOptinModule\Controller\ArticleDetailsController
     OxidEsales\Eshop\Application\Controller\ContactController:
       - OxidEsales\GdprOptinModule\Controller\ContactController
+    OxidEsales\Eshop\Application\Component\BasketComponent:
+      - OxidEsales\PayPalModule\Component\BasketComponent
+      - TopConcepts\Klarna\Component\KlarnaBasketComponent
+    OxidEsales\Eshop\Application\Controller\OrderController:
+      - OxidEsales\PayPalModule\Controller\OrderController
+      - fc/fcpayone/extend/application/controllers/fcPayOneOrderView
+      - TopConcepts\Klarna\Controller\KlarnaOrderController
+    OxidEsales\Eshop\Application\Controller\PaymentController:
+      - OxidEsales\PayPalModule\Controller\PaymentController
+      - fc/fcpayone/extend/application/controllers/fcPayOnePaymentView
+      - TopConcepts\Klarna\Controller\KlarnaPaymentController
+    OxidEsales\Eshop\Application\Controller\WrappingController:
+      - OxidEsales\PayPalModule\Controller\WrappingController
+    OxidEsales\Eshop\Application\Controller\Admin\OrderList:
+      - OxidEsales\PayPalModule\Controller\Admin\OrderList
+      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderList
+    OxidEsales\Eshop\Application\Controller\Admin\DeliverySetMain:
+      - OxidEsales\PayPalModule\Controller\Admin\DeliverySetMain
+    OxidEsales\Eshop\Application\Model\Address:
+      - OxidEsales\PayPalModule\Model\Address
+      - fc/fcpayone/extend/application/models/fcPayOneAddress
+      - TopConcepts\Klarna\Model\KlarnaAddress
+    OxidEsales\Eshop\Application\Model\User:
+      - OxidEsales\PayPalModule\Model\User
+      - fc/fcpayone/extend/application/models/fcPayOneUser
+      - TopConcepts\Klarna\Model\KlarnaUser
+    OxidEsales\Eshop\Application\Model\Order:
+      - OxidEsales\PayPalModule\Model\Order
+      - fc/fcpayone/extend/application/models/fcPayOneOrder
+      - TopConcepts\Klarna\Model\KlarnaOrder
+    OxidEsales\Eshop\Application\Model\Basket:
+      - OxidEsales\PayPalModule\Model\Basket
+      - fc/fcpayone/extend/application/models/fcPayOneBasket
+      - TopConcepts\Klarna\Model\KlarnaBasket
+    OxidEsales\Eshop\Application\Model\Article:
+      - OxidEsales\PayPalModule\Model\Article
+      - TopConcepts\Klarna\Model\KlarnaArticle
+    OxidEsales\Eshop\Application\Model\PaymentGateway:
+      - OxidEsales\PayPalModule\Model\PaymentGateway
+      - fc/fcpayone/extend/application/models/fcPayOnePaymentgateway
+      - TopConcepts\Klarna\Model\PaymentGateway
+    OxidEsales\Eshop\Application\Model\PaymentList:
+      - OxidEsales\PayPalModule\Model\PaymentList
+    OxidEsales\Eshop\Application\Controller\Admin\PaymentMain:
+      - fc/fcpayone/extend/application/controllers/admin/fcPayOnePaymentMain
+      - TopConcepts\Klarna\Controller\Admin\KlarnaPaymentMain
+    OxidEsales\Eshop\Application\Controller\BasketController:
+      - fc/fcpayone/extend/application/controllers/fcPayOneBasketView
+      - TopConcepts\Klarna\Controller\KlarnaBasketController
+    OxidEsales\Eshop\Application\Controller\UserController:
+      - fc/fcpayone/extend/application/controllers/fcPayOneUserView
+      - TopConcepts\Klarna\Controller\KlarnaUserController
+    OxidEsales\Eshop\Application\Controller\ThankYouController:
+      - fc/fcpayone/extend/application/controllers/fcPayOneThankyouView
+      - TopConcepts\Klarna\Controller\KlarnaThankYouController
+    OxidEsales\Eshop\Application\Model\BasketItem:
+      - fc/fcpayone/extend/application/models/fcPayOneBasketitem
+    OxidEsales\Eshop\Application\Model\OrderArticle:
+      - fc/fcpayone/extend/application/models/fcPayOneOrderarticle
+      - TopConcepts\Klarna\Model\KlarnaOrderArticle
+    OxidEsales\Eshop\Application\Model\Payment:
+      - fc/fcpayone/extend/application/models/fcPayOnePayment
+      - TopConcepts\Klarna\Model\KlarnaPayment
+    OxidEsales\Eshop\Application\Controller\TextEditorHandler:
+      - OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
+    OxidEsales\Eshop\Core\Language:
+      - OxidEsales\WysiwygModule\Core\Language
+    OxidEsales\Eshop\Core\Utils:
+      - OxidEsales\WysiwygModule\Core\Utils
+    OxidEsales\Eshop\Application\Model\CountryList:
+      - TopConcepts\Klarna\Model\KlarnaCountryList
+    OxidEsales\Eshop\Application\Model\UserPayment:
+      - TopConcepts\Klarna\Model\KlarnaUserPayment
+    OxidEsales\Eshop\Application\Controller\Admin\OrderAddress:
+      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderAddress
+    OxidEsales\Eshop\Application\Controller\Admin\OrderArticle:
+      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderArticle
+    OxidEsales\Eshop\Application\Controller\Admin\OrderMain:
+      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderMain
+    OxidEsales\Eshop\Application\Controller\Admin\OrderOverview:
+      - TopConcepts\Klarna\Controller\Admin\KlarnaOrderOverview
+    OxidEsales\Eshop\Application\Component\Widget\ServiceMenu:
+      - TopConcepts\Klarna\Component\Widgets\KlarnaServiceMenu
+    OxidEsales\Eshop\Core\Config:
+      - TopConcepts\Klarna\Core\Config
+    OxidEsales\Eshop\Core\ShopControl:
+      - TopConcepts\Klarna\Core\KlarnaShopControl
     OxidEsales\Eshop\Core\Output:
       - Makaira\OxidConnectEssential\Oxid\Core\MakairaConnectOutput
     OxidEsales\Eshop\Application\Controller\Admin\ArticleAttributeAjax:
@@ -1524,29 +1076,3 @@ moduleChains:
       - Makaira\OxidConnectEssential\Controller\Admin\ManufacturerMainAjax
     OxidEsales\Eshop\Application\Controller\Admin\SelectListMainAjax:
       - Makaira\OxidConnectEssential\Controller\Admin\SelectListMainAjax
-    OxidEsales\Eshop\Core\ViewHelper\JavaScriptRenderer:
-      - OxidProfessionalServices\Usercentrics\Core\ScriptRenderer
-    OxidEsales\Eshop\Application\Controller\Admin\ModuleConfiguration:
-      - OxidSolutionCatalysts\Unzer\Controller\Admin\ModuleConfiguration
-    OxidEsales\Eshop\Application\Model\BasketItem:
-      - fc/fcpayone/extend/application/models/fcPayOneBasketitem
-    OxidEsales\Eshop\Application\Controller\Admin\RolesBackendMain:
-      - fc/fcpayone/extend/application/controllers/admin/fcPayOneRolesBeMain
-    OxidEsales\Eshop\Application\Controller\WrappingController:
-      - OxidEsales\PayPalModule\Controller\WrappingController
-    OxidEsales\Eshop\Application\Controller\Admin\DeliverySetMain:
-      - OxidEsales\PayPalModule\Controller\Admin\DeliverySetMain
-    OxidEsales\Eshop\Application\Model\PaymentList:
-      - OxidEsales\PayPalModule\Model\PaymentList
-    OxidEsales\Eshop\Core\UtilsView:
-      - OxidEsales\VisualCmsModule\Core\UtilsView
-    OxidEsales\Eshop\Core\Theme:
-      - OxidEsales\VisualCmsModule\Core\Theme
-    OxidEsales\Eshop\Application\Controller\ContentController:
-      - OxidEsales\VisualCmsModule\Application\Controller\ContentController
-    OxidEsales\Eshop\Application\Model\Content:
-      - OxidEsales\VisualCmsModule\Application\Model\Content
-    OxidEsales\Eshop\Application\Model\ContentList:
-      - OxidEsales\VisualCmsModule\Application\Model\ContentList
-    OxidEsales\Eshop\Application\Model\SeoEncoderContent:
-      - OxidEsales\VisualCmsModule\Application\Model\SeoEncoderContent

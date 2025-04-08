@@ -1,1 +1,0 @@
-<p>[{ oxmultilang ident="OXDIAG_INTROINFORMATION_CONTACT_US" }] <strong><a class="underlined" href="[{$oView->getSupportContactForm()}]" target=_blank>[{ oxmultilang ident="OXDIAG_INTROINFORMATION_ONLINE_CONTACT_FORM" }]</a></strong>.</p>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2025-03-26 06:46:15
+<?php /* Smarty version 2.6.33, created on 2025-04-08 01:40:42
          compiled from header_template.tpl */ ?>
 <?php if ($this->_tpl_vars['shopEdition'] == 'CE'): ?>
 /**

@@ -1,7 +1,0 @@
-REPLACE INTO `ddmedia` (`OXID`, `OXSHOPID`, `DDFILENAME`, `DDFILESIZE`, `DDFILETYPE`, `DDTHUMB`, `DDIMAGESIZE`, `OXTIMESTAMP`) VALUES
-( MD5('demo_oxid_bg.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_bg.jpg',	15350,	'image/jpeg',	'306336ba4ac9bf942fd9a9202a1a159d_thumb_185.jpg',	'1440x300',	'2017-09-15 16:49:56'),
-( MD5('demo_oxid_banner1.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_banner1.jpg',	190341,	'image/jpeg',	'4be7e66335de4477c260a96dfeb21248_thumb_185.jpg',	'1440x600',	'2017-09-15 16:49:57'),
-( MD5('demo_oxid_banner2.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_banner2.jpg',	253503,	'image/jpeg',	'4dee78460fe46490030d436620bfb9b3_thumb_185.jpg',	'1440x600',	'2017-09-15 16:49:56'),
-( MD5('demo_oxid_category1.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_category1.jpg',	52997,	'image/jpeg',	'5da2d58aae1fdd25a32bda830885ef62_thumb_185.jpg',	'600x250',	'2017-09-15 16:49:57'),
-( MD5('demo_oxid_category3.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_category3.jpg',	119052,	'image/jpeg',	'96ca5d72fad46d1e49462d8a0dfeeea0_thumb_185.jpg',	'600x530',	'2017-09-15 16:49:57'),
-( MD5('demo_oxid_category2.jpg|__SHOP_ID__'),	'__SHOP_ID__',	'demo_oxid_category2.jpg',	70440,	'image/jpeg',	'b85df7f3bc5a52c7c1b1c8defd09a61a_thumb_185.jpg',	'600x250',	'2017-09-15 16:49:56');
