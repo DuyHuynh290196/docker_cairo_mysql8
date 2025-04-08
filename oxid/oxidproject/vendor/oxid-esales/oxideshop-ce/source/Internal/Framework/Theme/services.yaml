@@ -1,0 +1,12 @@
+parameters:
+  oxid_esales.theme.admin.name: 'admin'
+
+services:
+  _defaults:
+    autowire: true
+
+  OxidEsales\EshopCommunity\Internal\Framework\Theme\Bridge\AdminThemeBridgeInterface:
+    class: OxidEsales\EshopCommunity\Internal\Framework\Theme\Bridge\AdminThemeBridge
+    arguments:
+      - '%oxid_esales.theme.admin.name%'
+    public: true

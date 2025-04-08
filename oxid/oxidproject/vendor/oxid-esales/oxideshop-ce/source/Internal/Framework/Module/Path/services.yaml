@@ -1,0 +1,6 @@
+services:
+  _defaults:
+    autowire: true
+
+  OxidEsales\EshopCommunity\Internal\Framework\Module\Path\ModulePathResolverInterface:
+    class: OxidEsales\EshopCommunity\Internal\Framework\Module\Path\ModulePathResolver

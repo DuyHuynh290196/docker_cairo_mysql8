@@ -1,0 +1,37 @@
+{
+    "name":        "ddoe/visualcms-module",
+    "description": "Drag & Drop E-Commerce CMS for OXID eShop.",
+    "type":        "oxideshop-module",
+    "keywords":    [
+        "oxid",
+        "modules",
+        "eShop",
+        "CMS",
+        "Drag & Drop",
+        "E-Commerce",
+        "eCommerce"
+    ],
+    "homepage":    "https://www.oxid-esales.com/en/home.html",
+    "license":     [
+        "proprietary"
+    ],
+    "authors":     [
+        {
+            "name":  "OXID eSales AG & digidesk - media solutions",
+            "email": "info@oxid-esales.com"
+        }
+    ],
+    "extra":       {
+        "oxideshop": {
+            "target-directory": "ddoe/visualcms"
+        }
+    },
+    "require":     {
+        "php": ">=5.6"
+    },
+    "autoload":    {
+        "psr-4": {
+            "OxidEsales\\VisualCmsModule\\": "../../../source/modules/ddoe/visualcms"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © OXID eSales AG. All rights reserved.
+ * See LICENSE file for license details.
+ */
+
+namespace OxidEsales\EshopProfessional\Tests\Integration\Core\Autoload\BackwardsCompatibility;
+
+class ForwardsCompatibleInstanceOfNewClassUnifiedClassName_1_Test extends \PHPUnit\Framework\TestCase
+{
+    /**
+     * Test the backwards compatibility of class instances created with oxNew and the alias class name
+     */
+    public function testForwardsCompatibleInstanceOfNewClassUnifiedClassName()
+    {
+        $realClassNameCE   = \OxidEsales\EshopCommunity\Application\Model\Article::class;
+        $realClassNamePE = \OxidEsales\EshopProfessional\Application\Model\Article::class;
+        $unifiedClassName = \OxidEsales\Eshop\Application\Model\Article::class;
+        $backwardsCompatibleClassAlias = \oxArticle::class;
+
+        $message = 'Backwards compatible class name - absolute namespace with ::class constant';
+
+        $object = new $unifiedClassName();
+
+        $this->assertInstanceOf($backwardsCompatibleClassAlias, $object, $message);
+        $this->assertInstanceOf($realClassNameCE, $object, $message);
+        $this->assertInstanceOf($realClassNamePE, $object, $message);
+        $this->assertInstanceOf($unifiedClassName, $object, $message);
+    }
+}

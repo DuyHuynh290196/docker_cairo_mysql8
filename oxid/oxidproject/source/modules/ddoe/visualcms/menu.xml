@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="mxcustnews">
+            <SUBMENU id="ddoevisualcms" cl="ddoevisualcmsadmin">
+                <TAB />
+            </SUBMENU>
+            <SUBMENU id="mxcontent" cl="admin_content" list="content_list" visible="0">
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

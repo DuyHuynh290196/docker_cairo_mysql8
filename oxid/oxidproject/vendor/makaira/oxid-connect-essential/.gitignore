@@ -1,0 +1,9 @@
+/vendor/
+/node_modules/
+/build/*
+!/build/.gitkeep
+/.idea
+/out/node_modules
+/composer.lock
+/tests/reports/
+tests/utils/.env

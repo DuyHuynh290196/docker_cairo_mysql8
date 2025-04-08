@@ -1,0 +1,67 @@
+{
+    "name": "makaira/oxid-connect-essential",
+    "description": "Module for OXID eShop to connect it with Makaira.",
+    "type": "oxideshop-module",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://makaira.io/",
+    "authors": [
+        {
+            "name": "Stefan Krenz",
+            "email": "stefan.krenz@makaira.io"
+        },
+        {
+            "name": "Heike Reuter",
+            "email": "heike.reuter@oxid-esales.com"
+        },
+        {
+            "name": "Anton Fedurtsya",
+            "email": "anton.fedurtsya@oxid-esales.com"
+        },
+        {
+            "name": "Duong Tran",
+            "email": "duong.tran@marmalade.group"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "makaira/shared-libs": "^2022.1",
+        "symfony/http-foundation": "^5.4"
+    },
+    "require-dev": {
+        "pdepend/pdepend": "^2.6",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpmd/phpmd": "^2.0",
+        "phpstan/phpstan": "^1.5",
+        "oxid-esales/oxideshop-ce": "~6.14.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Makaira\\OxidConnectEssential\\": "src/",
+            "Makaira\\OxidConnectEssential\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=tests/phpcs.xml",
+        "phpcbf": "phpcbf --standard=tests/phpcs.xml",
+
+        "phpstan": "phpstan --xdebug -ctests/PhpStan/phpstan.neon analyse src/",
+        "phpstan-report": "phpstan --xdebug -ctests/PhpStan/phpstan.neon analyse src/ --error-format=json > phpstan.report.json",
+
+        "phpmd": "phpmd src text cleancode,codesize,design,naming,unusedcode",
+        "phpmd-report": "phpmd src json cleancode,codesize,design,naming,unusedcode --reportfile phpmd.report.json"
+    },
+    "extra": {
+        "oxideshop": {
+            "target-directory": "makaira/oxid-connect-essential"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "oxid-esales/oxideshop-unified-namespace-generator": true,
+            "oxid-esales/oxideshop-composer-plugin": false
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.idea
+./vendor/
+node_modules/
+modules/ddoe/visualcms/node_modules/
+.phpstorm-oxid.meta.php
+.DS_Store
+package-lock.json

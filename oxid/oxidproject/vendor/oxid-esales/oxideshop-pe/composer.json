@@ -1,0 +1,27 @@
+{
+    "name": "oxid-esales/oxideshop-pe",
+    "description": "This is OXID eShop PE edition.",
+    "keywords": ["oxid", "eShop"],
+    "homepage": "https://www.oxid-esales.com/en/home.html",
+    "license": [
+        "proprietary"
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "OxidEsales\\EshopProfessional\\": "./"
+        }
+    },
+    "scripts": {
+        "fix:cbf": "phpcbf",
+        "fix": [
+            "@fix:cbf"
+        ],
+        "test:lint": "phpcs",
+        "test": [
+            "@test:lint"
+        ]
+    }
+}

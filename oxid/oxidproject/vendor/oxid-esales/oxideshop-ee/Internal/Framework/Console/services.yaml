@@ -1,0 +1,29 @@
+services:
+  _defaults:
+    public: false
+    autowire: true
+
+  OxidEsales\EshopCommunity\Internal\Framework\Console\ExecutorInterface:
+    class: OxidEsales\EshopEnterprise\Internal\Framework\Console\Executor
+    public: true
+    arguments:
+    - '@oxid_esales.console.symfony.component.console.application'
+    - '@oxid_esales.console.symfony.component.console.output.console_output'
+    - '@oxid_esales.console.commands_provider.services_commands_provider'
+    - '@OxidEsales\EshopEnterprise\Internal\Transition\Adapter\EnterpriseShopAdapterInterface'
+
+  oxid_esales.console.symfony.component.console.output.console_output:
+    class: Symfony\Component\Console\Output\ConsoleOutput
+    public: false
+
+  oxid_esales.console.symfony.component.console.application:
+    class: Symfony\Component\Console\Application
+    public: false
+    calls:
+    - [setDispatcher, ['@Symfony\Component\EventDispatcher\EventDispatcherInterface']]
+
+  oxid_esales.console.command_event_subscriber:
+    class: OxidEsales\EshopEnterprise\Internal\Framework\Console\CommandEventSubscriber
+    public: false
+    tags:
+    - { name: kernel.event_subscriber }

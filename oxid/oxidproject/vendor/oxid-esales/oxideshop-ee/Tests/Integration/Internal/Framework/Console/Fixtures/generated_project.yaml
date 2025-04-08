@@ -1,0 +1,17 @@
+services:
+
+  oxid_esales.tests.integration.internal.console.fixtures.some_module_command:
+    class: OxidEsales\EshopEnterprise\Tests\Integration\Internal\Framework\Console\Fixtures\SomeModuleCommand
+    public: true
+    calls:
+      - [setActiveShops, [[2]]]
+      - [setContext, ['@OxidEsales\EshopCommunity\Internal\Transition\Utility\ContextInterface']]
+    tags:
+      - { name: 'console.command', command: 'oe:tests:test-command' }
+
+  oxid_esales.console.symfony.component.console.application:
+    class: Symfony\Component\Console\Application
+    public: false
+    calls:
+    - [setDispatcher, ['@Symfony\Component\EventDispatcher\EventDispatcherInterface']]
+    - [setAutoExit, [false]]

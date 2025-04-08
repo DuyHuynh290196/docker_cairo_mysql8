@@ -1,0 +1,14 @@
+{
+  "name": "oxid-esales/oxideshop-demodata-ee",
+  "description": "This is the demodata for OXID eShop EE.",
+  "type": "oxideshop-demodata",
+  "keywords": [
+    "oxid",
+    "demodata",
+    "eShop"
+  ],
+  "homepage": "https://www.oxid-esales.com/en/home.html",
+  "license": [
+    "proprietary"
+  ]
+}

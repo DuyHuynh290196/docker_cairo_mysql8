@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./apache
+    container_name: oxid-web
+    ports:
+      - "8080:80"  # Access OXID at http://localhost:8080
+    volumes:
+      - ./oxid:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - oxid-net
+
+  php:
+    build:
+      context: ./php
+    container_name: oxid-php
+    volumes:
+      - ./oxid:/var/www/html
+    networks:
+      - oxid-net
+
+  db:
+    platform: linux/amd64
+    image: mysql:8.0
+    container_name: oxid-db
+    volumes:
+      - ./data/mysql/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: oxid
+      MYSQL_USER: oxid
+      MYSQL_PASSWORD: oxid
+    ports:
+      - "3306:3306"
+    networks:
+      - oxid-net
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: oxid-phpmyadmin
+    ports:
+      - "8081:80"  # Access phpMyAdmin at http://localhost:8081
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+    depends_on:
+      - db
+    networks:
+      - oxid-net
+
+volumes:
+  db_data:
+
+networks:
+  oxid-net:

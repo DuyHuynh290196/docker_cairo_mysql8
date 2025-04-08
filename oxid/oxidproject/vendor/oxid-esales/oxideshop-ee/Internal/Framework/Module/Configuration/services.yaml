@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    public: false
+
+  OxidEsales\EshopEnterprise\Internal\Framework\Module\Configuration\Bridge\ShopConfigurationGeneratorBridgeInterface:
+    class: OxidEsales\EshopEnterprise\Internal\Framework\Module\Configuration\Bridge\ShopConfigurationGeneratorBridge
+    public: true
+
+  OxidEsales\EshopEnterprise\Internal\Framework\Module\Configuration\Service\ShopConfigurationGeneratorInterface:
+    class: OxidEsales\EshopEnterprise\Internal\Framework\Module\Configuration\Service\ShopConfigurationGenerator

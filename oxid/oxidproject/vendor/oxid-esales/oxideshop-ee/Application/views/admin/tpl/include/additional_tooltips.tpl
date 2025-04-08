@@ -1,0 +1,3 @@
+<span class="popUpStyle" id="item_unassign" style="position: absolute;visibility: hidden;top:0;left:0;">[{oxmultilang ident="TOOLTIPS_ITEMUNASSIGN"}]</span>
+<span class="popUpStyle" id="role_new" style="position: absolute;visibility: hidden;top:0;left:0;">[{oxmultilang ident="TOOLTIPS_ARTLIST_NEWROLE"}]</span>
+<span class="popUpStyle" id="role_generator" style="position: absolute;visibility: hidden;top:0;left:0;">[{oxmultilang ident="TOOLTIPS_ARTLIST_ROLEGENERATOR"}]</span>
